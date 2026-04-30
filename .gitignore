@@ -1,0 +1,171 @@
+# Exclude script outputs
+/scripts/output/
+# Exclude backup dumps
+/dumps/
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+# Root .gitignore for run4fun-analytics
+
+# OS generated files
+.DS_Store
+.Identifier
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment / credential files
+.env
+.env.*
+.env.local
+.env.production
+!.env.example
+*.local
+secrets.yml
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+/security/
+.aws/
+*credentials*
+**/aws-credentials.csv
+id_rsa*
+id_ed25519*
+
+# Java / Maven
+/target/
+/backend/target/
+/backend/target_test-classes/
+**/target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Build outputs
+/build/
+/.gradle/
+/.mvn/
+
+# OpenAPI / generated sources
+/backend/target/generated-sources/
+
+# IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+# Node / frontend
+/frontend/node_modules/
+/frontend/dist/
+/frontend/dist-ssr/
+node_modules/
+npm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+!frontend/package-lock.json
+
+# Vite / build caches
+.vite/
+.parcel-cache/
+.cache/
+
+# Coverage
+coverage/
+/.nyc_output/
+
+# Test reports
+surefire-reports/
+target/surefire-reports/
+
+# Playwright and E2E test results
+test-results/
+frontend/test-results/
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# Misc
+*.bak
+*.swp
+*.tmp
+*.log
+*.diff
+*.patch
+Makefile.orig
+backend-test-summary.txt
+class-usage.txt
+diff.md
+difference.md
+/patch/*.patch
+backend/bin/
+# Local DB backups
+backups/*
+!backups/README.md
+
+# Local runtime artifacts
+*.pid
+
+# Ignore Word documents
+*.docx
+docs/*.docx
+
+# Local machine artifacts
+README.mdd
+/local-images/
+local-images/
+.venv/
+
+# Dumps and archives
+/dumps/
+*.tar.gz
+*.zip
+*.7z
+*.rar
+*.tar
+*.xz
+*.gz
+*.bz2
+
+*.backup
+*.sql
+zip/
+auxiliary/
+backup/
+blog/
+companions/

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geometria Simpléctica — Luís Ferreira</title>
+<script>
+  MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']], tags: 'none' },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1208; --ink-light: #3a2e1e; --ink-faint: #6b5a3e;
+    --parchment: #f5eedc; --parchment-dark: #ede4cc; --parchment-deeper: #e4d9bc;
+    --accent: #5c3d1e; --accent-light: #8b6239; --rule: #a08050; --margin-note: #7a5c2e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 17px; }
+  body {
+    background: #d4c9a8;
+    background-image: radial-gradient(ellipse at 20% 10%, #c8bc96 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, #bfb38a 0%, transparent 60%);
+    min-height: 100vh; padding: 3rem 1rem;
+    font-family: 'EB Garamond', Georgia, serif; color: var(--ink);
+  }
+  .page-wrapper { max-width: 820px; margin: 0 auto; }
+  .page {
+    background: var(--parchment);
+    border: 1px solid #c5b58a; border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.10);
+    padding: 4rem 5rem 4rem 5.5rem; margin-bottom: 2.5rem;
+    position: relative; page-break-after: always;
+  }
+  .page::before {
+    content: ''; position: absolute; left: 4rem; top: 0; bottom: 0;
+    width: 1px; background: rgba(200,150,80,.25);
+  }
+  h1.doc-title {
+    font-family: 'Cinzel', serif; font-size: 1.7rem; font-weight: 400;
+    letter-spacing: .25em; text-align: center; color: var(--accent);
+    text-transform: uppercase; margin-bottom: .4rem;
+  }
+  .doc-author { font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.05rem; text-align: right; color: var(--ink-faint); margin-top: 5rem; }
+  .doc-meta { font-family: 'Cormorant Garamond', serif; font-size: .88rem;
+    text-align: right; color: var(--ink-faint); margin-top: .25rem; }
+  h2.section {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+    font-weight: 600; font-style: italic; color: var(--accent);
+    border-bottom: 1px solid var(--rule); padding-bottom: .3rem;
+    margin: 2rem 0 1rem; display: flex; align-items: center; gap: .6rem;
+  }
+  h2.section::before { content: '→'; font-style: normal; font-size: 1rem; color: var(--rule); }
+  h3.subsection { font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+    font-weight: 600; color: var(--ink-light); margin: 1.5rem 0 .6rem; }
+  p { line-height: 1.85; margin-bottom: 1rem; text-align: justify; hyphens: auto; color: var(--ink-light); }
+  .math-block { background: var(--parchment-dark); border-left: 3px solid var(--accent-light);
+    border-radius: 0 3px 3px 0; padding: .75rem 1.25rem .75rem 1rem;
+    margin: 1.2rem 0; overflow-x: auto; font-size: .97rem; }
+  .math-block.centered { text-align: center; border-left: none;
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    background: transparent; padding: .9rem .5rem; border-radius: 0; }
+  .defn-box { background: var(--parchment-deeper); border: 1px solid #c5a96a;
+    border-radius: 3px; padding: 1rem 1.2rem; margin: 1.2rem 0; font-size: .97rem; line-height: 1.75; }
+  .defn-box .label { font-family: 'Cinzel', serif; font-size: .75rem;
+    letter-spacing: .1em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: .4rem; display: block; }
+  .nota { margin: 1rem 0; padding: .6rem 1rem; background: rgba(200,170,100,.1);
+    border-left: 2px solid var(--rule); font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: .92rem; color: var(--ink-faint); }
+  .nota strong { font-style: normal; color: var(--accent); }
+  .page-num { position: absolute; top: 1.5rem; right: 2rem;
+    font-family: 'Cormorant Garamond', serif; font-size: .85rem; color: var(--ink-faint); }
+  .ornament { text-align: center; color: var(--rule); font-size: 1.2rem; margin: 1.8rem 0; letter-spacing: .6em; }
+  /* diagram container */
+  .diag { margin: 1.8rem 0; border: 1px solid rgba(160,128,80,.2);
+    border-radius: 3px; background: rgba(245,238,220,.3); padding: .5rem; }
+  .diag figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: .82rem; color: var(--ink-faint); text-align: center; margin-top: .3rem; }
+  .page { animation: pageIn .5s ease both; }
+  .page:nth-child(2) { animation-delay: .08s; }
+  .page:nth-child(3) { animation-delay: .16s; }
+  .page:nth-child(4) { animation-delay: .24s; }
+  @keyframes pageIn { from { opacity:0; transform: translateY(12px); } to { opacity:1; transform: translateY(0); } }
+  @media (max-width: 640px) { .page { padding: 2.5rem 1.8rem 2.5rem 2rem; } .page::before { left: 1.4rem; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<!-- TITLE PAGE -->
+<div class="page" style="min-height:520px;display:flex;flex-direction:column;justify-content:space-between;">
+  <div></div>
+  <div style="text-align:center;">
+    <div style="font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.3em;color:var(--rule);margin-bottom:2rem;text-transform:uppercase;">Instituto Superior Técnico</div>
+    <h1 class="doc-title">Geometria<br>Simpléctica</h1>
+    <div style="width:60px;height:1px;background:var(--rule);margin:1.5rem auto;"></div>
+  </div>
+  <div><div class="doc-author">Luís Ferreira</div><div class="doc-meta">IST n.º 31727 &nbsp;·&nbsp; 2 / 2 / 93</div></div>
+</div>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <div class="page-num">1</div>
+  <h2 class="section">Degenerescência da Forma Simpléctica</h2>
+  <p>As características que definem a forma simpléctica numa variedade \(M\) são: o fecho, a antissimetria e a não-degenerescência. As duas primeiras propriedades são ambas fundamentais, e em particular intervêm da seguinte forma: o fecho e a antissimetria serão essenciais para o Teorema de Darboux e para o estabelecimento de uma álgebra de observáveis através dos parêntesis de Poisson. A antissimetria origina propriedades conservativas, que se estendem às formas degeneradas. A não-degenerescência pode ser enfraquecida de forma a estabelecermos as boas propriedades em casos mais gerais.</p>
+  <p>Vamos estudar primeiro brevemente a importância da não-degenerescência.</p>
+  <div class="defn-box">
+    <span class="label">Forma Bilinear — Não-degenerescência</span>
+    \(\omega\) é <em>não-degenerada</em> se e só se: \[\omega(e_1,e_2)=0,\quad\forall\,e_2\in E\;\Longrightarrow\;e_1=0.\]
+  </div>
+  <p>Definimos o mapa linear \(\omega^\flat:E\to E^*\) \((TM\to T^*M)\) por \(\omega^\flat(e)\cdot e'=\omega(e,e')\). Então \(\omega^\flat(e)=\iota_e\omega\) e \([\omega^\flat]=[\omega_{ij}]\). A não-degenerescência de \(\omega\) implica que o núcleo de \(\omega^\flat\) é trivial; portanto \(\omega^\flat\) é injectiva e, como \(\dim E=\dim E^*\), é um <em>isomorfismo</em>. Logo determina-se um campo vectorial \(X_g\) através da condição: para um dado \(g:E\to\mathbb{R}\),</p>
+  <div class="math-block centered">\[\omega^\flat(X_g)=\iota_{X_g}\omega=dg,\qquad\text{i.e.,}\quad [X_g]=[\omega_{ij}]^{-1}\,[dg].\]</div>
+  <p>Se o observável \(g\) não depender explicitamente de alguma variável: \(g=g(q^1,\dots,q^{2n})\), temos \(dg=\bigl(\tfrac{\partial g}{\partial q_i},0\bigr)^\top\) e então \(\omega\) pode ser degenerada. Por exemplo: \(g(u,y,z)=uy+c^z\), \(dg=y\,du+x\,dy=(y,u,0)^\top\). Do Teorema de Darboux: \(\omega=\bigl(\begin{smallmatrix}0&1&0\\-1&0&0\\0&0&0\end{smallmatrix}\bigr)\), logo \(X_g=(u,-y,0)\).</p>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div class="page-num">2</div>
+  <p>Para podermos estabelecer uma álgebra de observáveis temos que eliminar este excesso de campos possíveis. No nosso exemplo o núcleo de \(\omega\) é todos os vectores da forma \(\bigl(0,0,\lambda(u,y,z)\bigr)\), ou seja \(X(u,y,z)\tfrac{\partial}{\partial z}\). Estes vectores aplicados ao observável \(g\) determinam superfícies (linhas neste caso) em que \(g\) é constante:</p>
+  <div class="math-block centered">\[X\cdot g=X(u,y,z)\,\tfrac{\partial}{\partial z}\,g(u,y)=0.\]</div>
+  <p>Logo se dispusermos de outro observável, também constante ao longo de \(z\), teríamos \(\{f,g\}=\mathcal{L}_{X_f}g=-\mathcal{L}_{X_g}f=0\). Para definirmos os parêntesis de Poisson vamos então considerar apenas os vectores perpendiculares a estas linhas, uma vez que \(f\) e \(g\) dependem apenas de \(x\) e \(y\).</p>
+
+  <!-- DIAGRAM 1: Foliation leaves -->
+  <figure class="diag">
+  <svg role="img" viewBox="0 0 680 310" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <title>Folhas z=c₁ e z=c₂ com vectores do núcleo ker ω♭ = ⟨∂/∂z⟩</title>
+  <desc>Vista axonométrica de dois planos horizontais (folhas da foliação em z=c₁ e z=c₂) com setas verticais a representar o núcleo de ω-flat, a direcção ∂/∂z</desc>
+  <defs><marker id="d1a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <polygon points="160,268 410,268 468,213 218,213" fill="rgba(150,195,155,0.16)" stroke="#a08050" stroke-width="0.9"/>
+  <polygon points="160,153 410,153 468,98 218,98" fill="rgba(150,195,155,0.26)" stroke="#a08050" stroke-width="0.9"/>
+  <line x1="243" y1="211" x2="243" y2="155" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d1a)"/>
+  <line x1="298" y1="211" x2="298" y2="155" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d1a)"/>
+  <line x1="357" y1="211" x2="357" y2="155" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d1a)"/>
+  <line x1="275" y1="185" x2="275" y2="120" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d1a)"/>
+  <line x1="390" y1="181" x2="390" y2="116" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d1a)"/>
+  <line x1="178" y1="260" x2="392" y2="260" stroke="#5c3d1e" stroke-width="1.2" marker-end="url(#d1a)"/>
+  <line x1="178" y1="260" x2="235" y2="213" stroke="#5c3d1e" stroke-width="1.2" marker-end="url(#d1a)"/>
+  <line x1="160" y1="268" x2="160" y2="116" stroke="#5c3d1e" stroke-width="1.2" marker-end="url(#d1a)"/>
+  <text x="402" y="274" font-size="14" font-style="italic" fill="#5c3d1e" font-family="'EB Garamond',Georgia,serif">x</text>
+  <text x="243" y="210" font-size="14" font-style="italic" fill="#5c3d1e" font-family="'EB Garamond',Georgia,serif">y</text>
+  <text x="147" y="112" font-size="14" font-style="italic" fill="#5c3d1e" font-family="'EB Garamond',Georgia,serif">z</text>
+  <text x="478" y="248" font-size="12" font-style="italic" fill="#7a5c2e" font-family="'EB Garamond',Georgia,serif">z = c₁</text>
+  <text x="478" y="133" font-size="12" font-style="italic" fill="#7a5c2e" font-family="'EB Garamond',Georgia,serif">z = c₂</text>
+  <text x="415" y="188" font-size="12" fill="#3a2e1e" font-family="'EB Garamond',Georgia,serif">ker ω♭</text>
+  <text x="418" y="203" font-size="11" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">= ⟨∂/∂z⟩</text>
+  </svg>
+  <figcaption>Folhas (planos \(z=\text{const}\)) e vectores do núcleo de \(\omega^\flat\) — a direcção ker \(\omega^\flat=\langle\partial/\partial z\rangle\)</figcaption>
+  </figure>
+
+  <h3 class="subsection">Geometria Diferencial</h3>
+  <div class="math-block">\[\omega(x,y)=\omega^\flat(x)\cdot y=\iota_x\omega\cdot y;\qquad\ker\omega^\flat=\{X\mid\iota_x\omega\equiv 0\}.\]</div>
+  <p>Se \(\omega\) tiver posto constante \(k\), então \(\ker\omega\) é um sub-fibrado de \(TM\) (chamemo-lhe \(E\)) — um sub-fibrado é quando a base é a mesma mas as fibras são menores. Então, segundo o Teorema de Frobenius, \(E\) é integrável se e só se surge de uma foliação regular.</p>
+  <p><strong>Provar que \(E\) é integrável:</strong> sejam \(X,Y\in\ker\omega\). Verificamos que \([X,Y]\in\ker\omega\):</p>
+  <div class="math-block centered">\[\iota_{[X,Y]}\omega=\mathcal{L}_X\iota_Y\omega-\iota_Y\mathcal{L}_X\omega=\mathcal{L}_X\iota_Y\omega-\iota_Yd\iota_x\omega-\iota_Y\iota_x\,d\omega=0.\]</div>
+  <div class="nota"><strong>Nota:</strong> É necessário que \(d\omega=0\), pois esta é uma condição fundamental para estabelecermos a álgebra.</div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <div class="page-num">3</div>
+  <p>Então já sabemos que \(E\) surge de uma foliação regular, ou seja: "para cada \(m_0\in M\), existe uma subvariedade local \(N\subset M\), chamada <em>folha</em> da foliação, que contém \(m_0\) e cujo fibrado Tangente é exactamente \(E\) restrito a \(N\)."</p>
+  <div class="defn-box">
+    <span class="label">Definição — Foliação (segundo Abraham)</span>
+    Uma foliação \(\mathcal{F}\) de classe \(C^n\), \(n\geq 0\), e dimensão \(p\) numa variedade \(m\)-dimensional \(M\) é uma decomposição de \(M\) em subconjuntos conexos disjuntos \(\mathcal{F}=\{L_\alpha\}_{\alpha\in A}\), denominados as <em>folhas</em>, tais que cada ponto de \(M\) tem uma vizinhança \(U\) e um sistema de coordenadas \(C^n\)\ \((x,y):U\to\mathbb{R}^p\times\mathbb{R}^{m-p}\), tal que para cada folha \(L_\alpha\) as componentes de \(U\cap L_\alpha\) são descritas pelas equações \(y_1=c_1,\;\dots,\;y_{m-p}=c_2\).
+  </div>
+
+  <!-- DIAGRAM 2: Foliation chart -->
+  <figure class="diag">
+  <svg role="img" viewBox="0 0 680 265" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <title>Carta da foliação φ: U → ℝᵖ × ℝᵐ⁻ᵖ</title>
+  <desc>Uma vizinhança U em M representada como oval com curvas de folhas Lα, ligada por carta φ ao espaço produto, onde as folhas se tornam linhas horizontais no primeiro factor e pontos no segundo</desc>
+  <defs><marker id="d2a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <ellipse cx="132" cy="133" rx="103" ry="104" fill="rgba(150,175,215,0.09)" stroke="#a08050" stroke-width="0.9"/>
+  <path d="M 47,82 Q 132,72 217,82" fill="none" stroke="#8b6239" stroke-width="1"/>
+  <path d="M 38,106 Q 132,96 226,106" fill="none" stroke="#8b6239" stroke-width="1"/>
+  <path d="M 34,130 Q 132,120 230,130" fill="none" stroke="#8b6239" stroke-width="1"/>
+  <path d="M 38,154 Q 132,144 226,154" fill="none" stroke="#8b6239" stroke-width="1"/>
+  <path d="M 48,178 Q 132,169 216,178" fill="none" stroke="#8b6239" stroke-width="1"/>
+  <text x="132" y="20" text-anchor="middle" font-size="15" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">U</text>
+  <text x="222" y="100" font-size="12" font-style="italic" fill="#7a5c2e" font-family="'EB Garamond',Georgia,serif">L</text>
+  <text x="229" y="104" font-size="9" font-style="italic" fill="#7a5c2e" font-family="'EB Garamond',Georgia,serif">α</text>
+  <line x1="238" y1="133" x2="286" y2="133" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d2a)"/>
+  <text x="261" y="123" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">φ</text>
+  <rect x="293" y="43" width="150" height="178" fill="rgba(150,175,215,0.09)" stroke="#a08050" stroke-width="0.9"/>
+  <line x1="305" y1="82"  x2="431" y2="82"  stroke="#8b6239" stroke-width="1"/>
+  <line x1="305" y1="106" x2="431" y2="106" stroke="#8b6239" stroke-width="1"/>
+  <line x1="305" y1="130" x2="431" y2="130" stroke="#8b6239" stroke-width="1"/>
+  <line x1="305" y1="154" x2="431" y2="154" stroke="#8b6239" stroke-width="1"/>
+  <line x1="305" y1="178" x2="431" y2="178" stroke="#8b6239" stroke-width="1"/>
+  <text x="368" y="28" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">ℝ</text>
+  <text x="377" y="23" font-size="10" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">p</text>
+  <text x="368" y="238" text-anchor="middle" font-size="10" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">direcção das folhas</text>
+  <text x="455" y="140" text-anchor="middle" font-size="18" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">×</text>
+  <rect x="473" y="43" width="150" height="178" fill="rgba(150,175,215,0.09)" stroke="#a08050" stroke-width="0.9"/>
+  <line x1="494" y1="56" x2="494" y2="208" stroke="#8b6239" stroke-width="0.9" stroke-dasharray="4 3"/>
+  <line x1="516" y1="56" x2="516" y2="208" stroke="#8b6239" stroke-width="0.9" stroke-dasharray="4 3"/>
+  <line x1="538" y1="56" x2="538" y2="208" stroke="#8b6239" stroke-width="0.9" stroke-dasharray="4 3"/>
+  <line x1="560" y1="56" x2="560" y2="208" stroke="#8b6239" stroke-width="0.9" stroke-dasharray="4 3"/>
+  <line x1="582" y1="56" x2="582" y2="208" stroke="#8b6239" stroke-width="0.9" stroke-dasharray="4 3"/>
+  <line x1="604" y1="56" x2="604" y2="208" stroke="#8b6239" stroke-width="0.9" stroke-dasharray="4 3"/>
+  <text x="548" y="28" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">ℝ</text>
+  <text x="557" y="23" font-size="10" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">m−p</text>
+  <text x="548" y="238" text-anchor="middle" font-size="10" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">direcção transversal</text>
+  <text x="368" y="133" text-anchor="middle" font-size="10" fill="#8b6239" font-family="'EB Garamond',Georgia,serif">y = const</text>
+  </svg>
+  <figcaption>Carta \(\varphi:U\to\mathbb{R}^p\times\mathbb{R}^{m-p}\) — as folhas \(L_\alpha\) tornam-se conjuntos de nível \(y_1=c_1,\,\dots,\,y_{m-p}=c_2\)</figcaption>
+  </figure>
+
+  <p>Podemos determinar as folhas através dos observáveis que permanecem constantes sobre elas: \(f=c_1\), \(g=c_2\), etc. Se \(df(u)\neq 0\) com \(u\in f^{-1}(c)\), então \(c\) é um valor regular de \(f\) e \(f^{-1}(c)\) é uma subvariedade de \(M\) de codimensão \(k\).</p>
+  <div class="math-block">\[\begin{cases}X\cdot f=0\\Y\cdot f=0\end{cases}\Longrightarrow[X,Y]\cdot f=0,\quad\text{pois }[X,Y]\text{ é ainda um campo vectorial tangente à folha.}\]</div>
+  <p>A fim de estabelecer intrinsecamente a "perpendicularidade" introduzida no exemplo linear, podemos eliminar os campos "indesejados" estabelecendo uma relação de equivalência em \(TM\) e efectuando o quociente de \(TM\) por essa relação. O novo fibrado Tangente será \(TM/N\). A sua base é uma variedade simpléctica sobre a qual se pode estabelecer uma álgebra de observáveis com parêntesis de Poisson e todas as boas propriedades.</p>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <div class="page-num">4</div>
+  <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+  <h2 class="section">Equação de 2.ª Ordem Definida Intrinsecamente</h2>
+  <div class="defn-box">
+    <span class="label">Definição — Abraham</span>
+    Uma equação de 2.ª ordem numa variedade \(M\) é um campo vectorial \(X\) em \(TM\) tal que \(T\tau_M\circ X\) é a identidade em \(TM\).
+  </div>
+
+  <!-- DIAGRAM 3: Commutative square -->
+  <figure class="diag">
+  <svg role="img" viewBox="0 0 680 310" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <title>Diagrama comutativo: X é equação de 2ª ordem sse Tτ_M ∘ X = Id_TM</title>
+  <desc>Quadrado comutativo com nós TM topo-esquerda, TTM topo-direita, TM baixo-esquerda, TM baixo-direita. Seta X no topo, Id à esquerda, Tτ_M à direita, Id tracejado em baixo. A seta τ_M leva TM a M. Um arco tracejado mostra τ_TM ∘ X = Id (X é campo vectorial, secção do fibrado).</desc>
+  <defs><marker id="d3a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <!-- nodes -->
+  <rect x="148" y="58" width="76" height="34" rx="4" fill="rgba(155,178,215,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="186" y="79" text-anchor="middle" font-size="15" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <rect x="450" y="58" width="90" height="34" rx="4" fill="rgba(155,178,215,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="495" y="79" text-anchor="middle" font-size="15" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TTM</text>
+  <rect x="148" y="194" width="76" height="34" rx="4" fill="rgba(155,178,215,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="186" y="215" text-anchor="middle" font-size="15" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <rect x="450" y="194" width="76" height="34" rx="4" fill="rgba(155,178,215,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="488" y="215" text-anchor="middle" font-size="15" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <rect x="454" y="276" width="64" height="30" rx="4" fill="rgba(140,188,158,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="486" y="295" text-anchor="middle" font-size="15" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">M</text>
+  <!-- arrows -->
+  <line x1="226" y1="75" x2="448" y2="75" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d3a)"/>
+  <text x="337" y="65" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">X</text>
+  <line x1="186" y1="94" x2="186" y2="191" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d3a)"/>
+  <text x="165" y="146" text-anchor="middle" font-size="13" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">Id</text>
+  <line x1="492" y1="94" x2="488" y2="191" stroke="#1a1208" stroke-width="1.4" marker-end="url(#d3a)"/>
+  <text x="518" y="132" font-size="13" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">T</text>
+  <text x="527" y="132" font-size="13" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="537" y="136" font-size="10" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">M</text>
+  <line x1="226" y1="211" x2="448" y2="211" stroke="#8b6239" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#d3a)"/>
+  <text x="337" y="230" text-anchor="middle" font-size="13" font-style="italic" fill="#8b6239" font-family="'EB Garamond',Georgia,serif">Id</text>
+  <line x1="486" y1="230" x2="482" y2="273" stroke="#1a1208" stroke-width="1.3" marker-end="url(#d3a)"/>
+  <text x="504" y="256" font-size="13" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="513" y="260" font-size="10" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">M</text>
+  <!-- dashed arc: τ_TM ∘ X = Id -->
+  <path d="M 493,56 Q 493,20 337,20 Q 188,20 186,56" fill="none" stroke="#a08050" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#d3a)"/>
+  <text x="337" y="14" text-anchor="middle" font-size="11" font-style="italic" fill="#a08050" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="345" y="11" font-size="9" font-style="italic" fill="#a08050" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <text x="354" y="14" font-size="11" fill="#a08050" font-family="'EB Garamond',Georgia,serif"> ∘ X = Id</text>
+  <!-- commutativity symbol -->
+  <text x="328" y="152" text-anchor="middle" font-size="22" fill="rgba(160,128,80,0.32)" font-family="'EB Garamond',Georgia,serif">⟳</text>
+  </svg>
+  <figcaption>Diagrama comutativo: \(X\) é equação de 2.ª ordem \(\Longleftrightarrow\) \(T\tau_M\circ X=\mathrm{Id}_{TM}\)</figcaption>
+  </figure>
+
+  <p>Antes de prosseguir: \(\tau_M:TM\to M\) é a projecção do fibrado Tangente na sua base; \(T\tau_M:TTM\to TM\) é o mapa tangente entre os fibrados vectoriais \(TTM\) e \(TM\). Um mapa tangente é um caso particular de um <em>vector bundle mapping</em>, ou seja, um mapa \(C^\infty\) fiber-preserving e linear em cada fibra: \(f_*X(n)=(Tf\circ X\circ f^{-1})(n)\).</p>
+  <div class="math-block centered" style="font-size:.9rem;">\[\tau_{TM}\circ X=\mathrm{Id}_{TM},\qquad T\tau_M\circ X=\mathrm{Id}_{TM}.\]</div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <div class="page-num">5</div>
+  <p>A projecção canónica \(\tau_{TM}\) "achata" as fibras na base \(TM\), enquanto que a projecção \(T\tau_M\) projecta apenas a parte "horizontal" da fibra e a base \(M\).</p>
+
+  <!-- DIAGRAM 4: Fiber bundle tower + integral curves -->
+  <figure class="diag">
+  <svg role="img" viewBox="0 0 680 388" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <title>Fibrado tangente iterado TTM sobre TM sobre M, e diagrama das curvas integrais c, c′, c″</title>
+  <desc>Painel esquerdo: três caixas 3D empilhadas a representar TTM dimensão 4n, TM dimensão 2n, e M dimensão n, com setas de projecção τ_TM e τ_M a descer e seta X tracejada a subir de TM para TTM. Painel direito: diagrama comutativo mostrando como uma curva c de I para M se levanta a c-linha em TM e c-duas-linhas em TTM, com dois caminhos ① e ② que coincidem quando X é de segunda ordem.</desc>
+  <defs><marker id="d4a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+  <!-- LEFT: fiber bundle tower -->
+  <!-- TTM 3D box -->
+  <polygon points="38,43 242,43 258,31 54,31" fill="rgba(150,175,215,0.08)" stroke="#c5a96a" stroke-width="0.7"/>
+  <polygon points="242,43 258,31 258,120 242,132" fill="rgba(150,175,215,0.06)" stroke="#c5a96a" stroke-width="0.7"/>
+  <rect x="38" y="43" width="204" height="89" rx="3" fill="rgba(150,175,215,0.11)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="140" y="84" text-anchor="middle" font-size="16" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TTM</text>
+  <text x="140" y="104" text-anchor="middle" font-size="11" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">dim = 4n</text>
+  <!-- τ_TM arrow down (left) -->
+  <line x1="112" y1="134" x2="112" y2="179" stroke="#1a1208" stroke-width="1.3" marker-end="url(#d4a)"/>
+  <text x="74" y="162" font-size="12" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="82" y="166" font-size="9" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <!-- Tτ_M arrow down (dashed, right) -->
+  <line x1="152" y1="134" x2="152" y2="179" stroke="#8b6239" stroke-width="1.1" stroke-dasharray="4 3" marker-end="url(#d4a)"/>
+  <text x="157" y="159" font-size="12" fill="#8b6239" font-family="'EB Garamond',Georgia,serif">T</text>
+  <text x="166" y="159" font-size="12" font-style="italic" fill="#8b6239" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="176" y="163" font-size="9" font-style="italic" fill="#8b6239" font-family="'EB Garamond',Georgia,serif">M</text>
+  <!-- TM 3D box -->
+  <polygon points="54,183 232,183 246,172 68,172" fill="rgba(150,175,215,0.08)" stroke="#c5a96a" stroke-width="0.7"/>
+  <polygon points="232,183 246,172 246,248 232,259" fill="rgba(150,175,215,0.06)" stroke="#c5a96a" stroke-width="0.7"/>
+  <rect x="54" y="183" width="178" height="76" rx="3" fill="rgba(150,175,215,0.11)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="143" y="222" text-anchor="middle" font-size="16" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <text x="143" y="240" text-anchor="middle" font-size="11" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">dim = 2n</text>
+  <!-- X arrow going up (dashed, far left) -->
+  <line x1="40" y1="179" x2="40" y2="135" stroke="#1a1208" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#d4a)"/>
+  <text x="20" y="161" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">X</text>
+  <!-- τ_M arrow down -->
+  <line x1="112" y1="261" x2="112" y2="303" stroke="#1a1208" stroke-width="1.3" marker-end="url(#d4a)"/>
+  <text x="74" y="287" font-size="12" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="82" y="291" font-size="9" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">M</text>
+  <!-- M 3D box -->
+  <polygon points="70,307 218,307 230,297 82,297" fill="rgba(138,188,155,0.08)" stroke="#c5a96a" stroke-width="0.7"/>
+  <polygon points="218,307 230,297 230,357 218,367" fill="rgba(138,188,155,0.06)" stroke="#c5a96a" stroke-width="0.7"/>
+  <rect x="70" y="307" width="148" height="60" rx="3" fill="rgba(138,188,155,0.11)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="144" y="339" text-anchor="middle" font-size="16" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">M</text>
+  <text x="144" y="357" text-anchor="middle" font-size="11" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">dim = n</text>
+
+  <!-- vertical separator -->
+  <line x1="295" y1="24" x2="295" y2="382" stroke="rgba(160,128,80,.22)" stroke-width="0.6" stroke-dasharray="6 4"/>
+
+  <!-- RIGHT: integral curve ladder -->
+  <text x="492" y="20" text-anchor="middle" font-size="12" font-style="italic" fill="#7a5c2e" font-family="'EB Garamond',Georgia,serif">Curvas integrais</text>
+
+  <!-- Row TTM -->
+  <rect x="342" y="43" width="82" height="32" rx="4" fill="rgba(150,175,215,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="383" y="63" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TTM</text>
+  <rect x="572" y="43" width="48" height="32" rx="4" fill="rgba(220,200,155,0.14)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="596" y="63" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">I</text>
+  <line x1="570" y1="59" x2="426" y2="59" stroke="#1a1208" stroke-width="1.3" marker-end="url(#d4a)"/>
+  <text x="496" y="50" text-anchor="middle" font-size="12" font-style="italic" fill="#3a2e1e" font-family="'EB Garamond',Georgia,serif">c″</text>
+  <line x1="622" y1="59" x2="642" y2="59" stroke="#8b6239" stroke-width="1" marker-end="url(#d4a)"/>
+  <text x="629" y="52" font-size="11" fill="#8b6239" font-family="'EB Garamond',Georgia,serif">①</text>
+
+  <!-- Row TM -->
+  <rect x="346" y="166" width="74" height="32" rx="4" fill="rgba(150,175,215,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="383" y="186" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <rect x="572" y="166" width="48" height="32" rx="4" fill="rgba(220,200,155,0.14)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="596" y="186" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">I</text>
+  <line x1="570" y1="182" x2="422" y2="182" stroke="#1a1208" stroke-width="1.3" marker-end="url(#d4a)"/>
+  <text x="494" y="173" text-anchor="middle" font-size="12" font-style="italic" fill="#3a2e1e" font-family="'EB Garamond',Georgia,serif">c′</text>
+  <line x1="622" y1="182" x2="642" y2="182" stroke="#8b6239" stroke-width="1" marker-end="url(#d4a)"/>
+  <text x="629" y="175" font-size="11" fill="#8b6239" font-family="'EB Garamond',Georgia,serif">②</text>
+
+  <!-- Row M -->
+  <rect x="352" y="289" width="62" height="32" rx="4" fill="rgba(138,188,155,0.12)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="383" y="309" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">M</text>
+  <rect x="572" y="289" width="48" height="32" rx="4" fill="rgba(220,200,155,0.14)" stroke="#c5a96a" stroke-width="0.8"/>
+  <text x="596" y="309" text-anchor="middle" font-size="14" font-style="italic" fill="#1a1208" font-family="'EB Garamond',Georgia,serif">I</text>
+  <line x1="570" y1="305" x2="416" y2="305" stroke="#1a1208" stroke-width="1.3" marker-end="url(#d4a)"/>
+  <text x="491" y="296" text-anchor="middle" font-size="12" font-style="italic" fill="#3a2e1e" font-family="'EB Garamond',Georgia,serif">c</text>
+
+  <!-- Vertical arrows right column (I → I) -->
+  <line x1="596" y1="77"  x2="596" y2="163" stroke="#6b5a3e" stroke-width="1.1" marker-end="url(#d4a)"/>
+  <line x1="596" y1="200" x2="596" y2="286" stroke="#6b5a3e" stroke-width="1.1" marker-end="url(#d4a)"/>
+
+  <!-- Vertical arrows left column (projections) -->
+  <line x1="383" y1="77"  x2="383" y2="163" stroke="#1a1208" stroke-width="1.1" marker-end="url(#d4a)"/>
+  <text x="360" y="123" font-size="11" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="368" y="127" font-size="8"  font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">TM</text>
+  <line x1="383" y1="200" x2="383" y2="286" stroke="#1a1208" stroke-width="1.1" marker-end="url(#d4a)"/>
+  <text x="360" y="247" font-size="11" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">τ</text>
+  <text x="368" y="251" font-size="8"  font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">M</text>
+
+  <text x="492" y="360" text-anchor="middle" font-size="11" font-style="italic" fill="#6b5a3e" font-family="'EB Garamond',Georgia,serif">X é 2ª ordem ⟺ curvas ① e ② coincidem</text>
+  </svg>
+  <figcaption><em>Esq.:</em> fibrado \(TTM\xrightarrow{\;\tau_{TM}\;}TM\xrightarrow{\;\tau_M\;}M\) com \(X:TM\to TTM\). &ensp;<em>Dir.:</em> curva \(c\) em \(M\) e levantamentos \(c',\,c''\) a \(TM\) e \(TTM\)</figcaption>
+  </figure>
+
+  <p>\(X\) é uma equação de 2.ª ordem em \(M\) se e só se as curvas <em>(1)</em> e <em>(2)</em> coincidem. Efectuamos uma mudança de notação \((\tau_M\circ c)\to c\) e temos para a <em>curva integral de base de \(X\)</em>, \(c(t)\):</p>
+
+  <div class="math-block centered">\[c''(t)=X\bigl(c'(t)\bigr).\]</div>
+
+  <p>Das condições (*), obtemos \(X_1(u,e)=e\). Então, finalmente:</p>
+
+  <div class="math-block">
+    \[\begin{cases}\dfrac{d}{dt}\,u(c(t))=e(c'(t))\\[1em]\dfrac{d^2}{dt^2}\,u(c(t))=X_2\bigl(u(c(t)),\,e(c(t))\bigr)\end{cases}\]
+  </div>
+
+  <p>com \(c'(t)=\bigl(c(t),\,\dot{c}(t)\bigr)\). E temos uma equação de segundo grau definida intrinsecamente.</p>
+
+  <div class="nota"><strong>Nota:</strong> O importante aqui é a descrição do movimento em 2.ª ordem, que obtemos em coordenadas locais a partir da nossa definição intrínseca.</div>
+
+  <div class="ornament">· · ·</div>
+  <div class="doc-author" style="margin-top:3rem;">Luís Ferreira</div>
+  <div class="doc-meta">IST n.º 31727 &nbsp;·&nbsp; 2 de Fevereiro de 1993</div>
+</div>
+
+</div>
+</body>
+</html>
