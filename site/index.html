@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Geometria Simpléctica — Luís Ferreira</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #1a1208; --ink-light: #3a2e1e; --ink-faint: #6b5a3e;
-    --parchment: #f5eedc; --accent: #5c3d1e; --accent-light: #8b6239; --rule: #a08050;
+    --parchment: #f5eedc; --parchment-dark: #ede4cc; --parchment-deeper: #e4d9bc;
+    --accent: #5c3d1e; --accent-light: #8b6239; --rule: #a08050; --margin-note: #7a5c2e;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { font-size: 17px; }
@@ -19,92 +20,152 @@
     min-height: 100vh; padding: 3rem 1rem;
     font-family: 'EB Garamond', Georgia, serif; color: var(--ink);
   }
+  .page-wrapper { max-width: 820px; margin: 0 auto; }
   .page {
-    max-width: 820px; margin: 0 auto;
     background: var(--parchment);
     border: 1px solid #c5b58a; border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.10);
-    padding: 3.5rem clamp(1.5rem, 6vw, 5rem);
+    padding: 4rem 5rem 4rem 5.5rem; margin-bottom: 2.5rem;
+    position: relative; animation: pageIn .5s ease both;
   }
-  h1 {
+  .page::before {
+    content: ''; position: absolute; left: 4rem; top: 0; bottom: 0;
+    width: 1px; background: rgba(200,150,80,.25);
+  }
+
+  /* --- folha de rosto --- */
+  .title-page { display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; }
+  .kicker {
+    font-family: 'Cinzel', serif; font-size: .75rem; letter-spacing: .3em;
+    color: var(--rule); text-transform: uppercase; margin-bottom: 2rem;
+  }
+  h1.doc-title {
     font-family: 'Cinzel', serif; font-size: 1.7rem; font-weight: 400;
     letter-spacing: .25em; text-align: center; color: var(--accent);
-    line-height: 1.5;
+    text-transform: uppercase; margin-bottom: .4rem; line-height: 1.55;
   }
-  .subtitle {
-    text-align: center; color: var(--ink-faint); font-style: italic;
-    margin-top: .75rem; font-size: 1.05rem;
+  .title-rule { width: 60px; height: 1px; background: var(--rule); margin: 1.5rem auto; }
+  .doc-author { font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.05rem; text-align: right; color: var(--ink-faint); }
+  .doc-meta { font-family: 'Cormorant Garamond', serif; font-size: .88rem;
+    text-align: right; color: var(--ink-faint); margin-top: .25rem; }
+
+  /* --- índice das edições --- */
+  h2.section {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+    font-weight: 600; font-style: italic; color: var(--accent);
+    border-bottom: 1px solid var(--rule); padding-bottom: .3rem;
+    margin-bottom: 1.4rem; display: flex; align-items: center; gap: .6rem;
   }
-  hr {
-    border: 0; height: 1px; background: var(--rule); opacity: .5;
-    margin: 2.25rem 0;
-  }
-  .lede { line-height: 1.7; color: var(--ink-light); }
-  .lede + .lede { margin-top: 1rem; }
-  ul.editions { list-style: none; margin-top: 2.25rem; }
-  ul.editions li + li { margin-top: 1.25rem; }
+  h2.section::before { content: '→'; font-style: normal; font-size: 1rem; color: var(--rule); }
+  p.lede { line-height: 1.85; margin-bottom: 1rem; text-align: justify;
+    hyphens: auto; color: var(--ink-light); }
+  .ornament { text-align: center; color: var(--rule); font-size: 1.2rem;
+    margin: 1.8rem 0; letter-spacing: .6em; }
+
+  ul.editions { list-style: none; }
+  ul.editions li + li { margin-top: 1rem; }
   ul.editions a {
-    display: block; padding: 1.15rem 1.35rem;
-    border: 1px solid #ccbb94; border-left: 3px solid var(--accent-light);
-    background: rgba(255,255,255,.4);
-    text-decoration: none; color: inherit;
-    transition: background .15s ease, border-left-color .15s ease;
+    display: block; text-decoration: none; color: inherit;
+    background: var(--parchment-deeper); border: 1px solid #c5a96a;
+    border-radius: 3px; padding: 1rem 1.2rem;
+    transition: background .15s ease, box-shadow .15s ease, transform .15s ease;
   }
-  ul.editions a:hover, ul.editions a:focus {
-    background: rgba(255,255,255,.75); border-left-color: var(--accent);
+  ul.editions a:hover, ul.editions a:focus-visible {
+    background: var(--parchment-dark);
+    box-shadow: 0 2px 8px rgba(90,60,20,.14);
+    transform: translateY(-1px);
+    outline: none;
   }
-  ul.editions .name {
-    font-family: 'Cinzel', serif; font-size: 1.05rem;
-    letter-spacing: .08em; color: var(--accent);
+  ul.editions a:focus-visible { border-color: var(--accent); }
+  ul.editions .label {
+    font-family: 'Cinzel', serif; font-size: .75rem; letter-spacing: .1em;
+    color: var(--accent); text-transform: uppercase; margin-bottom: .4rem;
+    display: flex; align-items: baseline; gap: .5rem;
   }
-  ul.editions .desc {
-    display: block; margin-top: .4rem; line-height: 1.6;
-    color: var(--ink-light); font-size: .95rem;
+  ul.editions .label::after {
+    content: '↗'; font-family: 'EB Garamond', serif; font-size: .8rem;
+    letter-spacing: 0; color: var(--rule); opacity: .55;
   }
-  footer {
-    margin-top: 2.5rem; text-align: center;
-    color: var(--ink-faint); font-size: .85rem; font-style: italic;
+  ul.editions .desc { font-size: .97rem; line-height: 1.75; color: var(--ink-light); }
+
+  .colophon {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: .92rem; color: var(--ink-faint); text-align: center;
+    margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid rgba(160,128,80,.3);
+  }
+
+  .page:nth-child(2) { animation-delay: .08s; }
+  @keyframes pageIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) {
+    .page { animation: none; }
+    ul.editions a { transition: none; }
+    ul.editions a:hover { transform: none; }
+  }
+  @media (max-width: 640px) {
+    .page { padding: 2.5rem 1.8rem 2.5rem 2rem; }
+    .page::before { left: 1.4rem; }
+    .title-page { min-height: 0; }
+    h1.doc-title { font-size: 1.35rem; letter-spacing: .18em; }
   }
 </style>
 </head>
 <body>
-<main class="page">
-  <h1>Geometria Simpléctica</h1>
-  <p class="subtitle">Tese de licenciatura — Luís Ferreira, 1993</p>
+<div class="page-wrapper">
 
-  <hr>
+  <!-- FOLHA DE ROSTO -->
+  <div class="page title-page">
+    <div></div>
+    <div style="text-align:center;">
+      <div class="kicker">Instituto Superior Técnico</div>
+      <h1 class="doc-title">Geometria<br>Simpléctica</h1>
+      <div class="title-rule"></div>
+    </div>
+    <div>
+      <div class="doc-author">Luís Ferreira</div>
+      <div class="doc-meta">IST n.º 31727 &nbsp;·&nbsp; 2 / 2 / 93</div>
+    </div>
+  </div>
 
-  <p class="lede">Estudo da degenerescência da forma simpléctica e da definição
-  intrínseca das equações diferenciais de segunda ordem. O documento original é
-  manuscrito; abaixo estão três leituras do mesmo texto, da mais legível à mais
-  fiel ao original.</p>
+  <!-- ÍNDICE DAS EDIÇÕES -->
+  <div class="page">
+    <h2 class="section">Edições deste manuscrito</h2>
 
-  <ul class="editions">
-    <li>
-      <a href="geometria_simpletica.html" target="_blank" rel="noopener">
-        <span class="name">Transcrição</span>
-        <span class="desc">Texto integral composto de novo, com a notação
-        matemática tipografada. A versão mais legível e a mais fácil de pesquisar.</span>
-      </a>
-    </li>
-    <li>
-      <a href="geometria-simpletica-selectable.html" target="_blank" rel="noopener">
-        <span class="name">Transcrição com diagramas originais</span>
-        <span class="desc">A mesma transcrição selectável, intercalada com os
-        esquemas e diagramas tal como aparecem no manuscrito.</span>
-      </a>
-    </li>
-    <li>
-      <a href="geometria-simpletica-facsimile.html" target="_blank" rel="noopener">
-        <span class="name">Fac-símile</span>
-        <span class="desc">Fac-símile HTML autónomo do manuscrito original, com as
-        páginas incorporadas como imagens, para preservar o texto manuscrito, os
-        símbolos e as anotações com a maior fidelidade possível.</span>
-      </a>
-    </li>
-  </ul>
+    <p class="lede">Tese de licenciatura sobre a degenerescência da forma
+    simpléctica e a definição intrínseca das equações diferenciais de segunda
+    ordem. O documento original é manuscrito; abaixo estão três leituras do mesmo
+    texto, da mais legível à mais fiel ao original.</p>
 
-  <footer>Cada página é um ficheiro HTML autónomo e pode ser aberta ou arquivada isoladamente.</footer>
-</main>
+    <div class="ornament">· · ·</div>
+
+    <ul class="editions">
+      <li>
+        <a href="geometria_simpletica.html" target="_blank" rel="noopener">
+          <span class="label">Transcrição</span>
+          <span class="desc">Texto integral composto de novo, com a notação
+          matemática tipografada. A versão mais legível e a mais fácil de pesquisar.</span>
+        </a>
+      </li>
+      <li>
+        <a href="geometria-simpletica-selectable.html" target="_blank" rel="noopener">
+          <span class="label">Transcrição com diagramas originais</span>
+          <span class="desc">A mesma transcrição selectável, intercalada com os
+          esquemas e diagramas tal como aparecem no manuscrito.</span>
+        </a>
+      </li>
+      <li>
+        <a href="geometria-simpletica-facsimile.html" target="_blank" rel="noopener">
+          <span class="label">Fac-símile</span>
+          <span class="desc">Fac-símile HTML autónomo do manuscrito original, com
+          as páginas incorporadas como imagens, para preservar o texto manuscrito,
+          os símbolos e as anotações com a maior fidelidade possível.</span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="colophon">Cada página é um ficheiro HTML autónomo e pode ser aberta ou arquivada isoladamente.</p>
+  </div>
+
+</div>
 </body>
 </html>
