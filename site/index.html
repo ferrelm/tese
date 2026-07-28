@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geometria Simpléctica — Luís Ferreira</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1208; --ink-light: #3a2e1e; --ink-faint: #6b5a3e;
+    --parchment: #f5eedc; --accent: #5c3d1e; --accent-light: #8b6239; --rule: #a08050;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 17px; }
+  body {
+    background: #d4c9a8;
+    background-image: radial-gradient(ellipse at 20% 10%, #c8bc96 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, #bfb38a 0%, transparent 60%);
+    min-height: 100vh; padding: 3rem 1rem;
+    font-family: 'EB Garamond', Georgia, serif; color: var(--ink);
+  }
+  .page {
+    max-width: 820px; margin: 0 auto;
+    background: var(--parchment);
+    border: 1px solid #c5b58a; border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.10);
+    padding: 3.5rem clamp(1.5rem, 6vw, 5rem);
+  }
+  h1 {
+    font-family: 'Cinzel', serif; font-size: 1.7rem; font-weight: 400;
+    letter-spacing: .25em; text-align: center; color: var(--accent);
+    line-height: 1.5;
+  }
+  .subtitle {
+    text-align: center; color: var(--ink-faint); font-style: italic;
+    margin-top: .75rem; font-size: 1.05rem;
+  }
+  hr {
+    border: 0; height: 1px; background: var(--rule); opacity: .5;
+    margin: 2.25rem 0;
+  }
+  .lede { line-height: 1.7; color: var(--ink-light); }
+  .lede + .lede { margin-top: 1rem; }
+  ul.editions { list-style: none; margin-top: 2.25rem; }
+  ul.editions li + li { margin-top: 1.25rem; }
+  ul.editions a {
+    display: block; padding: 1.15rem 1.35rem;
+    border: 1px solid #ccbb94; border-left: 3px solid var(--accent-light);
+    background: rgba(255,255,255,.4);
+    text-decoration: none; color: inherit;
+    transition: background .15s ease, border-left-color .15s ease;
+  }
+  ul.editions a:hover, ul.editions a:focus {
+    background: rgba(255,255,255,.75); border-left-color: var(--accent);
+  }
+  ul.editions .name {
+    font-family: 'Cinzel', serif; font-size: 1.05rem;
+    letter-spacing: .08em; color: var(--accent);
+  }
+  ul.editions .desc {
+    display: block; margin-top: .4rem; line-height: 1.6;
+    color: var(--ink-light); font-size: .95rem;
+  }
+  footer {
+    margin-top: 2.5rem; text-align: center;
+    color: var(--ink-faint); font-size: .85rem; font-style: italic;
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <h1>Geometria Simpléctica</h1>
+  <p class="subtitle">Tese de licenciatura — Luís Ferreira, 1993</p>
+
+  <hr>
+
+  <p class="lede">Estudo da degenerescência da forma simpléctica e da definição
+  intrínseca das equações diferenciais de segunda ordem. O manuscrito original é
+  manuscrito; abaixo estão três leituras do mesmo documento, da mais legível à
+  mais fiel ao original.</p>
+
+  <ul class="editions">
+    <li>
+      <a href="geometria_simpletica.html">
+        <span class="name">Transcrição</span>
+        <span class="desc">Texto integral composto de novo, com a notação
+        matemática tipografada. A versão mais legível e a mais fácil de pesquisar.</span>
+      </a>
+    </li>
+    <li>
+      <a href="geometria-simpletica-selectable.html">
+        <span class="name">Transcrição com diagramas originais</span>
+        <span class="desc">A mesma transcrição selectável, intercalada com os
+        esquemas e diagramas tal como aparecem no manuscrito.</span>
+      </a>
+    </li>
+    <li>
+      <a href="geometria-simpletica-facsimile.html">
+        <span class="name">Fac-símile</span>
+        <span class="desc">Fac-símile HTML autónomo do manuscrito original, com as
+        páginas incorporadas como imagens, para preservar o texto manuscrito, os
+        símbolos e as anotações com a maior fidelidade possível.</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer>Cada página é um ficheiro HTML autónomo e pode ser aberta ou arquivada isoladamente.</footer>
+</main>
+</body>
+</html>
