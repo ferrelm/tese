@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 218" width="680" height="218" xmlns="http://www.w3.org/2000/svg">
+<title>The Lie bracket as the failure of two flows to commute</title>
+<desc>Four arrows form a quadrilateral: along the flow of X, then along the flow of Y, then back along X and back along Y. The path does not return to the starting point p; the dashed gap between the endpoint and p is, to second order in the time t, the bracket of X and Y.</desc>
+<defs><marker id="q5ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q5acc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q5red" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q5fnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g transform="translate(0,-44)"><path d="M 214.0,198.0 Q 280.5,204.9 344.0,184.0" fill="none" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round" marker-end="url(#q5ink)"/>
+<text x="272.0" y="168.0" font-size="14" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">X</text>
+<path d="M 344.0,184.0 Q 385.5,149.0 404.0,98.0" fill="none" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round" marker-end="url(#q5ink)"/>
+<text x="392.0" y="150.0" font-size="14" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">Y</text>
+<path d="M 404.0,98.0 Q 336.7,90.1 272.0,110.0" fill="none" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round" marker-end="url(#q5ink)"/>
+<text x="330.0" y="80.0" font-size="14" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">−X</text>
+<path d="M 272.0,110.0 Q 241.5,138.6 236.0,180.0" fill="none" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round" marker-end="url(#q5ink)"/>
+<text x="224.0" y="140.0" font-size="14" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">−Y</text>
+<path d="M 236.0,180.0 Q 231.3,196.7 214.0,198.0" fill="none" stroke="#9b3b26" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#q5red)"/>
+<circle cx="214.0" cy="198.0" r="3.2" fill="#1a1208"/>
+<circle cx="236.0" cy="180.0" r="3.2" fill="#9b3b26"/>
+<text x="206.0" y="220.0" font-size="13" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">p</text>
+<path d="M 148.0,232.0 Q 173.9,212.6 206.0,208.0" fill="none" stroke="#6b5a3e" stroke-width="1" stroke-linecap="round" marker-end="url(#q5fnt)"/>
+<text x="60.0" y="244.0" font-size="11.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">the gap: t² [X,Y]</text>
+<text x="452.0" y="120.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Follow the flow of X for a</text>
+<text x="452.0" y="136.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">time t, then that of Y, then</text>
+<text x="452.0" y="152.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">back along X and back along</text>
+<text x="452.0" y="168.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Y. The quadrilateral fails to</text>
+<text x="452.0" y="184.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">close, and the gap measures</text>
+<text x="452.0" y="200.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">the bracket.</text></g>
+</svg>

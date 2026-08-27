@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 970" width="680" height="970" xmlns="http://www.w3.org/2000/svg">
+<title>The argument of the first half, in five steps, with an aside on the gradient</title>
+<desc>Five numbered panels read downwards, with an aside after the first comparing the gradient, which crosses the level sets, with the Hamiltonian field, which follows them. One: the form sees every direction and a quantity names a single motion. Two: one direction becomes invisible and the motion becomes a family. Three: the invisible direction joins two points at which every measurement agrees. Four: following two invisible directions in either order leaves an invisible mismatch, so they knit into surfaces. Five: collapsing each surface to a point leaves a space in which nothing is invisible.</desc>
+<defs><marker id="tAink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tAacc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tAred" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tAfnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<circle cx="44" cy="79" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="84.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">1</text>
+<path d="M 96.0,60.0 L 268.0,60.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 96.0,88.0 L 268.0,88.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 96.0,116.0 L 268.0,116.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<text x="272.0" y="64.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">g = c</text>
+<path d="M 180.0,48.0 Q 180.0,88.0 180.0,128.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round" marker-end="url(#tAacc)"/>
+<text x="186.0" y="44.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">dg</text>
+<path d="M 208.0,88.0 Q 254.0,88.0 300.0,88.0" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" marker-end="url(#tAred)"/>
+<text x="306.0" y="84.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">X</text>
+<text x="314.0" y="88.0" font-size="9" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">g</text>
+<text x="360.0" y="74.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">The form sees every direction, so the</text><text x="360.0" y="89.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">equation for the motion has exactly</text><text x="360.0" y="104.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">one solution: a quantity names one</text><text x="360.0" y="119.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">motion, and only one.</text>
+<path d="M 40.0,160.0 L 640.0,160.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="4 5" opacity="0.5" fill="none"/>
+<text x="58.0" y="238.0" font-size="10.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e" text-anchor="middle">an aside</text>
+<path d="M 100.0,220.0 L 224.0,220.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 268.0,220.0 L 392.0,220.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 100.0,246.0 L 224.0,246.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 268.0,246.0 L 392.0,246.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 100.0,272.0 L 224.0,272.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 268.0,272.0 L 392.0,272.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<circle cx="162.0" cy="246.0" r="3.2" fill="#1a1208"/>
+<path d="M 162.0,246.0 Q 162.0,227.0 162.0,208.0" fill="none" stroke="#5c3d1e" stroke-width="1.6" stroke-linecap="round" marker-end="url(#tAacc)"/>
+<text x="170.0" y="210.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">grad g</text>
+<text x="100.0" y="294.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">with a metric: across the levels</text>
+<circle cx="300.0" cy="246.0" r="3.2" fill="#9b3b26"/>
+<path d="M 300.0,246.0 Q 339.0,246.0 378.0,246.0" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" marker-end="url(#tAred)"/>
+<text x="338.0" y="236.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">X</text>
+<text x="346.0" y="240.0" font-size="8" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">g</text>
+<text x="268.0" y="294.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">with ω: along them</text>
+<text x="414.0" y="214.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Same recipe, different instrument. A</text><text x="414.0" y="229.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">metric is symmetric and gives the</text><text x="414.0" y="244.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">gradient, climbing across the levels;</text><text x="414.0" y="259.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">ω changes sign when its arguments are</text><text x="414.0" y="274.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">swapped, and that turns the answer a</text><text x="414.0" y="289.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">quarter turn — along them instead. Which</text><text x="414.0" y="304.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">is why a quantity is conserved by the</text><text x="414.0" y="319.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">motion it itself generates.</text>
+<path d="M 40.0,318.0 L 640.0,318.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="4 5" opacity="0.5" fill="none"/>
+<circle cx="44" cy="395" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="400.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">2</text>
+<path d="M 96.0,376.0 L 268.0,376.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 96.0,404.0 L 268.0,404.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 96.0,432.0 L 268.0,432.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<path d="M 208.0,404.0 Q 254.0,404.0 300.0,404.0" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" marker-end="url(#tAred)"/>
+<path d="M 208.0,404.0 Q 254.0,391.0 300.0,378.0" fill="none" stroke="#9b3b26" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#tAred)" opacity="0.8"/>
+<path d="M 208.0,404.0 Q 254.0,417.0 300.0,430.0" fill="none" stroke="#9b3b26" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#tAred)" opacity="0.8"/>
+<path d="M 150.0,446.0 Q 150.0,407.0 150.0,368.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round" marker-end="url(#tAacc)"/>
+<path d="M 150.0,368.0 Q 150.0,407.0 150.0,446.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round" marker-end="url(#tAacc)"/>
+<text x="126.0" y="364.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">k</text>
+<text x="360.0" y="382.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Let one direction become invisible.</text><text x="360.0" y="397.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Any multiple of it may now be added</text><text x="360.0" y="412.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">and nothing in the equation notices:</text><text x="360.0" y="427.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">what the quantity names is a family</text><text x="360.0" y="442.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">of motions, not a motion.</text>
+<path d="M 40.0,476.0 L 640.0,476.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="4 5" opacity="0.5" fill="none"/>
+<circle cx="44" cy="553" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="558.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">3</text>
+<path d="M 190.0,526.0 L 190.0,606.0" stroke="#5c3d1e" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+<circle cx="190.0" cy="542.0" r="3.4" fill="#1a1208"/>
+<circle cx="190.0" cy="592.0" r="3.4" fill="#1a1208"/>
+<text x="198.0" y="540.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">p</text>
+<text x="198.0" y="596.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">p′</text>
+<text x="216.0" y="540.0" font-size="10.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">g = 3,  f = 7</text>
+<text x="216.0" y="596.0" font-size="10.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">g = 3,  f = 7</text>
+<path d="M 174.0,590.0 Q 174.0,569.0 174.0,548.0" fill="none" stroke="#8b6239" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#tAacc)"/>
+<text x="100.0" y="572.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#8b6239">invisible</text>
+<text x="360.0" y="548.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Along an invisible direction nothing</text><text x="360.0" y="563.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">measurable changes. The two points</text><text x="360.0" y="578.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">are one situation wearing two</text><text x="360.0" y="593.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">different labels.</text>
+<path d="M 40.0,634.0 L 640.0,634.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="4 5" opacity="0.5" fill="none"/>
+<circle cx="44" cy="711" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="716.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">4</text>
+<path d="M 110.0,756.0 Q 142.9,758.9 174.0,748.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tAink)"/>
+<path d="M 174.0,748.0 Q 191.2,730.2 196.0,706.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tAink)"/>
+<path d="M 196.0,706.0 Q 164.5,701.0 134.0,710.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tAink)"/>
+<path d="M 134.0,710.0 Q 119.7,724.0 118.0,744.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tAink)"/>
+<path d="M 118.0,744.0 Q 119.0,753.3 110.0,756.0" fill="none" stroke="#5c3d1e" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#tAacc)"/>
+<text x="92.0" y="780.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">the mismatch is invisible too</text>
+<polygon points="264,748 358,748 392,726 298,726" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<polygon points="264,724 358,724 392,702 298,702" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<polygon points="264,700 358,700 392,678 298,678" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<path d="M 220.0,726.0 Q 238.0,726.0 256.0,726.0" fill="none" stroke="#6b5a3e" stroke-width="1.1" stroke-linecap="round" marker-end="url(#tAfnt)"/>
+<text x="414.0" y="698.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Follow two invisible directions, in</text><text x="414.0" y="713.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">one order and then the other: the</text><text x="414.0" y="728.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">mismatch is invisible again, because</text><text x="414.0" y="743.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">ω is closed. So they knit together</text><text x="414.0" y="758.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">into surfaces.</text>
+<path d="M 40.0,792.0 L 640.0,792.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="4 5" opacity="0.5" fill="none"/>
+<circle cx="44" cy="869" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="874.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">5</text>
+<polygon points="100,906 194,906 228,884 134,884" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<polygon points="100,882 194,882 228,860 134,860" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<polygon points="100,858 194,858 228,836 134,836" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<path d="M 250.0,880.0 Q 278.0,880.0 306.0,880.0" fill="none" stroke="#1a1208" stroke-width="1.4" stroke-linecap="round" marker-end="url(#tAink)"/>
+<text x="252.0" y="870.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">collapse</text>
+<path d="M 342.0,844.0 L 342.0,920.0" stroke="#5c3d1e" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+<circle cx="342.0" cy="856.0" r="3.4" fill="#1a1208"/>
+<circle cx="342.0" cy="880.0" r="3.4" fill="#1a1208"/>
+<circle cx="342.0" cy="904.0" r="3.4" fill="#1a1208"/>
+<text x="392.0" y="856.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Collapse each surface to a point.</text><text x="392.0" y="871.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">What is left has no invisible</text><text x="392.0" y="886.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">directions — not because the form</text><text x="392.0" y="901.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">was repaired, but because what it</text><text x="392.0" y="916.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">could not see is gone.</text>
+</svg>

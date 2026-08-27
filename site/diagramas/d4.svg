@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 424" width="680" height="424" xmlns="http://www.w3.org/2000/svg">
+<title>The chart φ carries the neighbourhood U of M onto the level sets y = const.</title>
+<desc>On top, M drawn as a plane in perspective with the neighbourhood U inside it; U is crossed by the leaves of the foliation, with the leaf L-alpha through m0 highlighted. The arrow phi = (x,y) goes down to the product R^p × R^(m−p), drawn below as a rectangle: there the leaves appear as horizontal levels and each one corresponds to a point of the transverse axis R^(m−p); the highlighted leaf is the level y = c.</desc>
+<defs><marker id="e2ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="e2acc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="e2red" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g transform="translate(0,-56)"><polygon points="112.0,236.0 432.0,236.0 532.0,164.0 212.0,164.0" fill="rgba(138,188,155,0.13)" stroke="#a08050" stroke-width="0.9"/>
+<text x="538.0" y="156.0" font-size="16" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">M</text>
+<defs><clipPath id="e2u"><ellipse cx="286" cy="194" rx="96" ry="32" transform="rotate(-12 286 194)"/></clipPath></defs>
+<ellipse cx="286" cy="194" rx="96" ry="32" transform="rotate(-12 286 194)" fill="rgba(150,175,215,0.14)" stroke="#a08050" stroke-width="1"/>
+<g clip-path="url(#e2u)"><path d="M 176.0,180.0 C 187.7,177.7 221.0,166.7 246.0,166.0 C 271.0,165.3 301.0,176.7 326.0,176.0 C 351.0,175.3 384.3,164.3 396.0,162.0" fill="none" stroke="#8b6239" stroke-width="1.0" stroke-linecap="round"/></g>
+<g clip-path="url(#e2u)"><path d="M 176.0,194.0 C 187.7,191.7 221.0,180.7 246.0,180.0 C 271.0,179.3 301.0,190.7 326.0,190.0 C 351.0,189.3 384.3,178.3 396.0,176.0" fill="none" stroke="#8b6239" stroke-width="1.0" stroke-linecap="round"/></g>
+<g clip-path="url(#e2u)"><path d="M 176.0,208.0 C 187.7,205.7 221.0,194.7 246.0,194.0 C 271.0,193.3 301.0,204.7 326.0,204.0 C 351.0,203.3 384.3,192.3 396.0,190.0" fill="none" stroke="#9b3b26" stroke-width="1.8" stroke-linecap="round"/></g>
+<g clip-path="url(#e2u)"><path d="M 176.0,222.0 C 187.7,219.7 221.0,208.7 246.0,208.0 C 271.0,207.3 301.0,218.7 326.0,218.0 C 351.0,217.3 384.3,206.3 396.0,204.0" fill="none" stroke="#8b6239" stroke-width="1.0" stroke-linecap="round"/></g>
+<circle cx="280.0" cy="204.0" r="3" fill="#9b3b26"/>
+<text x="262.0" y="220.0" font-size="11.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">m₀</text>
+<text x="276.0" y="148.0" font-size="14" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">U</text>
+<text x="398.0" y="202.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#9b3b26"><tspan dy="0.00" font-size="13.0" font-style="italic">L</tspan><tspan dy="3.90" font-size="9.4" font-style="italic">α</tspan></text>
+<path d="M 394.0,198.0 Q 375.0,199.0 356.0,200.0" fill="none" stroke="#9b3b26" stroke-width="1" stroke-linecap="round" marker-start="url(#e2red)"/>
+<path d="M 286.0,248.0 Q 286.0,282.0 286.0,316.0" fill="none" stroke="#1a1208" stroke-width="1.5" stroke-linecap="round" marker-end="url(#e2ink)"/>
+<text x="296.0" y="278.0" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">φ</text>
+<text x="308.0" y="292.0" font-size="10.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">= (x, y)</text>
+<rect x="186" y="326" width="276" height="120" fill="rgba(150,175,215,0.08)" stroke="#a08050" stroke-width="0.9"/>
+<path d="M 198,430 L 450,430" stroke="#8b6239" stroke-width="1.0"/>
+<path d="M 165,430 L 175,430" stroke="#5c3d1e" stroke-width="1.1"/>
+<path d="M 198,400 L 450,400" stroke="#8b6239" stroke-width="1.0"/>
+<path d="M 165,400 L 175,400" stroke="#5c3d1e" stroke-width="1.1"/>
+<path d="M 198,370 L 450,370" stroke="#9b3b26" stroke-width="1.8"/>
+<path d="M 165,370 L 175,370" stroke="#5c3d1e" stroke-width="1.1"/>
+<circle cx="296.0" cy="370.0" r="3" fill="#9b3b26"/>
+<text x="468.0" y="374.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">y = c</text>
+<circle cx="170.0" cy="370.0" r="2.6" fill="#9b3b26"/>
+<path d="M 198,340 L 450,340" stroke="#8b6239" stroke-width="1.0"/>
+<path d="M 165,340 L 175,340" stroke="#5c3d1e" stroke-width="1.1"/>
+<path d="M 170.0,452.0 Q 170.0,386.0 170.0,320.0" fill="none" stroke="#5c3d1e" stroke-width="1.2" stroke-linecap="round" marker-end="url(#e2acc)"/>
+<text x="156.0" y="318.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#1a1208" text-anchor="end"><tspan dy="0.00" font-size="13.0" font-style="normal">ℝ</tspan><tspan dy="-5.46" font-size="9.4" font-style="normal">m−p</tspan></text>
+<text x="156.0" y="333.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e" text-anchor="end">transverse</text>
+<text x="456.0" y="318.0" font-size="12.5" font-family="'EB Garamond',Georgia,serif" fill="#1a1208" text-anchor="end"><tspan dy="0.00" font-size="12.5" font-style="normal">ℝ</tspan><tspan dy="-5.25" font-size="9.0" font-style="normal">p</tspan><tspan dy="5.25" font-size="12.5" font-style="normal"> × </tspan><tspan dy="0.00" font-size="12.5" font-style="normal">ℝ</tspan><tspan dy="-5.25" font-size="9.0" font-style="normal">m−p</tspan></text>
+<text x="458.0" y="466.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#1a1208" text-anchor="end"><tspan dy="0.00" font-size="13.0" font-style="normal">ℝ</tspan><tspan dy="-5.46" font-size="9.4" font-style="normal">p</tspan></text>
+<text x="428.0" y="466.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e" text-anchor="end">leaf direction</text></g>
+</svg>

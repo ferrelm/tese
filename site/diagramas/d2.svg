@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 496" width="680" height="496" xmlns="http://www.w3.org/2000/svg">
+<title>The argument of the second half, in three steps</title>
+<desc>Three panels read downwards. One: velocities are given a space of their own, so that a motion becomes a curve in TM. Two: a curve there moves position and velocity independently, and most such curves are not motions — the arrow may grow while the point stands still. Three: TTM projects onto TM in two different ways, and an equation of motion is a field on which the two readings agree.</desc>
+<defs><marker id="tBink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tBacc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tBred" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tBfnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<circle cx="44" cy="79" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="84.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">1</text>
+<polygon points="96,100 288,100 320,76 128,76" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<text x="326.0" y="80.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">TM</text>
+<path d="M 96.0,138.0 L 300.0,138.0" stroke="#1a1208" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+<text x="306.0" y="142.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">M</text>
+<circle cx="134.0" cy="138.0" r="3" fill="#9b3b26"/>
+<path d="M 134.0,138.0 Q 142.0,138.0 150.0,138.0" fill="none" stroke="#9b3b26" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBred)"/>
+<path d="M 134.0,136.0 L 140.0,86.0" stroke="#9b3b26" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.8" fill="none"/>
+<circle cx="140.0" cy="86.0" r="2.6" fill="#9b3b26"/>
+<circle cx="190.0" cy="138.0" r="3" fill="#9b3b26"/>
+<path d="M 190.0,138.0 Q 205.0,138.0 220.0,138.0" fill="none" stroke="#9b3b26" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBred)"/>
+<path d="M 190.0,136.0 L 196.0,79.0" stroke="#9b3b26" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.8" fill="none"/>
+<circle cx="196.0" cy="79.0" r="2.6" fill="#9b3b26"/>
+<circle cx="246.0" cy="138.0" r="3" fill="#9b3b26"/>
+<path d="M 246.0,138.0 Q 256.0,138.0 266.0,138.0" fill="none" stroke="#9b3b26" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBred)"/>
+<path d="M 246.0,136.0 L 252.0,84.0" stroke="#9b3b26" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.8" fill="none"/>
+<circle cx="252.0" cy="84.0" r="2.6" fill="#9b3b26"/>
+<path d="M 140.0,86.0 C 149.3,84.8 177.3,79.3 196.0,79.0 C 214.7,78.7 242.7,83.2 252.0,84.0" fill="none" stroke="#9b3b26" stroke-width="1.6" stroke-linecap="round"/>
+<text x="370.0" y="74.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Give velocities a space of their own:</text><text x="370.0" y="89.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">a point of TM is a position together</text><text x="370.0" y="104.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">with a velocity, and a motion becomes</text><text x="370.0" y="119.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">a curve drawn up there.</text>
+<path d="M 40.0,160.0 L 640.0,160.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="4 5" opacity="0.5" fill="none"/>
+<circle cx="44" cy="237" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="242.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">2</text>
+<path d="M 96.0,220.0 L 236.0,220.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<circle cx="116.0" cy="220.0" r="3.2" fill="#1a1208"/>
+<path d="M 116.0,220.0 Q 131.0,220.0 146.0,220.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBink)"/>
+<path d="M 272.0,220.0 L 412.0,220.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<circle cx="300.0" cy="220.0" r="3.2" fill="#9b3b26"/>
+<path d="M 300.0,220.0 Q 307.0,220.0 314.0,220.0" fill="none" stroke="#9b3b26" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBred)"/>
+<path d="M 96.0,248.0 L 236.0,248.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<circle cx="148.0" cy="248.0" r="3.2" fill="#1a1208"/>
+<path d="M 148.0,248.0 Q 163.0,248.0 178.0,248.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBink)"/>
+<path d="M 272.0,248.0 L 412.0,248.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<circle cx="300.0" cy="248.0" r="3.2" fill="#9b3b26"/>
+<path d="M 300.0,248.0 Q 315.0,248.0 330.0,248.0" fill="none" stroke="#9b3b26" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBred)"/>
+<path d="M 96.0,276.0 L 236.0,276.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<circle cx="180.0" cy="276.0" r="3.2" fill="#1a1208"/>
+<path d="M 180.0,276.0 Q 195.0,276.0 210.0,276.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBink)"/>
+<path d="M 272.0,276.0 L 412.0,276.0" stroke="#a08050" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+<circle cx="300.0" cy="276.0" r="3.2" fill="#9b3b26"/>
+<path d="M 300.0,276.0 Q 323.0,276.0 346.0,276.0" fill="none" stroke="#9b3b26" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBred)"/>
+<path d="M 84.0,214.0 Q 84.0,249.0 84.0,284.0" fill="none" stroke="#6b5a3e" stroke-width="1" stroke-linecap="round" marker-end="url(#tBfnt)"/>
+<text x="70.0" y="210.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">t</text>
+<text x="96.0" y="302.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">honest: the dot moves, and the</text>
+<text x="96.0" y="315.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">arrow is the rate at which it does</text>
+<text x="272.0" y="302.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">dishonest: the arrow grows while</text>
+<text x="272.0" y="315.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">the dot never moves at all</text>
+<text x="438.0" y="232.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">A curve in TM moves two things</text><text x="438.0" y="247.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">at once, and nothing forces the</text><text x="438.0" y="262.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">second to be the derivative of the</text><text x="438.0" y="277.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">first. Most curves up there are</text><text x="438.0" y="292.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">not motions.</text>
+<path d="M 40.0,318.0 L 640.0,318.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="4 5" opacity="0.5" fill="none"/>
+<circle cx="44" cy="395" r="13" fill="none" stroke="#a08050" stroke-width="1"/><text x="44.0" y="400.0" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e" text-anchor="middle">3</text>
+<polygon points="120,386 268,386 296,368 148,368" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<text x="302.0" y="374.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">TTM</text>
+<path d="M 160.0,392.0 Q 136.2,405.5 124.0,430.0" fill="none" stroke="#1a1208" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBink)"/>
+<text x="96.0" y="414.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">τ</text>
+<text x="103.0" y="418.0" font-size="8" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">TM</text>
+<path d="M 232.0,392.0 Q 255.8,405.5 268.0,430.0" fill="none" stroke="#8b6239" stroke-width="1.3" stroke-linecap="round" marker-end="url(#tBacc)"/>
+<text x="276.0" y="414.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">T</text>
+<text x="283.0" y="414.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">τ</text>
+<text x="290.0" y="418.0" font-size="8" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">M</text>
+<polygon points="104,454 288,454 316,436 132,436" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<text x="322.0" y="442.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">TM</text>
+<circle cx="196.0" cy="445.0" r="4" fill="#9b3b26"/>
+<text x="150.0" y="470.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">the two readings land on the same point</text>
+<text x="370.0" y="390.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">TTM comes back down to TM in two</text><text x="370.0" y="405.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">different ways: one keeps the pair the</text><text x="370.0" y="420.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">arrow sits on, the other reads the</text><text x="370.0" y="435.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">arrow as a velocity below. A motion is</text><text x="370.0" y="450.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">a field on which the two agree.</text>
+</svg>

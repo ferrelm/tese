@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 300" width="680" height="300" xmlns="http://www.w3.org/2000/svg">
+  <title>The same rhombic diagram in local coordinates</title>
+  <desc>A rhombus in local coordinates: on top U-prime times E times E times E, with the point (u-prime, e, e1, e2); T tau_M comes down to the left, giving (u-prime, e1), and tau_TM comes down to the right, giving (u-prime, e); tau_M carries both to U-prime, the point (u-prime).</desc>
+  <defs><marker id="e9fnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="e9acc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <text x="340" y="44" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208" text-anchor="middle">U′ × E × E × E</text>
+  <text x="340" y="64" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26" text-anchor="middle">(u′, e, e₁, e₂)</text>
+  <text x="150" y="164" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208" text-anchor="middle">U′ × ∘ × E × ∘</text>
+  <text x="150" y="184" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26" text-anchor="middle">(u′, e₁)</text>
+  <text x="530" y="164" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208" text-anchor="middle">U′ × E × ∘ × ∘</text>
+  <text x="530" y="184" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26" text-anchor="middle">(u′, e)</text>
+  <text x="340" y="258" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208" text-anchor="middle">U′</text>
+  <text x="340" y="278" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26" text-anchor="middle">(u′)</text>
+  <path d="M 272,74 Q 220,104 186,142" fill="none" stroke="#8b6239" stroke-width="1.4" stroke-linecap="round" marker-end="url(#e9acc)"/>
+  <text x="206" y="106" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e"><tspan font-style="normal">T</tspan><tspan font-style="italic">τ</tspan><tspan dy="3.9" font-size="9.4" font-style="italic">M</tspan></text>
+  <path d="M 408,74 Q 460,104 494,142" fill="none" stroke="#6b5a3e" stroke-width="1.4" stroke-linecap="round" marker-end="url(#e9fnt)"/>
+  <text x="452" y="106" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#6b5a3e"><tspan font-style="italic">τ</tspan><tspan dy="3.9" font-size="9.4" font-style="italic">TM</tspan></text>
+  <path d="M 196,196 Q 258,228 308,246" fill="none" stroke="#6b5a3e" stroke-width="1.3" stroke-linecap="round" marker-end="url(#e9fnt)"/>
+  <text x="228" y="234" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#6b5a3e"><tspan font-style="italic">τ</tspan><tspan dy="3.9" font-size="9.4" font-style="italic">M</tspan></text>
+  <path d="M 484,196 Q 422,228 372,246" fill="none" stroke="#6b5a3e" stroke-width="1.3" stroke-linecap="round" marker-end="url(#e9fnt)"/>
+  <text x="430" y="234" font-size="13" font-family="'EB Garamond',Georgia,serif" fill="#6b5a3e"><tspan font-style="italic">τ</tspan><tspan dy="3.9" font-size="9.4" font-style="italic">M</tspan></text>
+  </svg>

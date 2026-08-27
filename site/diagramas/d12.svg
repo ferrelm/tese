@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 232" width="680" height="232" xmlns="http://www.w3.org/2000/svg">
+<title>A vector bundle: base, fibres, a section, and a subbundle inside it</title>
+<desc>A base M drawn as a line at the foot, with a fibre standing over each of several of its points and the whole assembled into the total space E, projected onto M by pi. A wavy curve crossing every fibre once is a section. A shaded band occupying the lower part of each fibre is a subbundle: the same base, smaller fibres.</desc>
+<defs><marker id="q2ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q2acc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q2red" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q2fnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g transform="translate(0,-88)"><path d="M 96.0,262.0 C 116.7,261.0 179.3,256.0 220.0,256.0 C 260.7,256.0 300.0,262.0 340.0,262.0 C 380.0,262.0 419.3,256.0 460.0,256.0 C 500.7,256.0 563.3,261.0 584.0,262.0 L 584.0,110.0 C 563.3,109.0 500.7,104.0 460.0,104.0 C 419.3,104.0 380.0,110.0 340.0,110.0 C 300.0,110.0 260.7,104.0 220.0,104.0 C 179.3,104.0 116.7,109.0 96.0,110.0 Z" fill="rgba(150,175,215,0.10)" stroke="none"/>
+<path d="M 96.0,262.0 C 116.7,261.0 179.3,256.0 220.0,256.0 C 260.7,256.0 300.0,262.0 340.0,262.0 C 380.0,262.0 419.3,256.0 460.0,256.0 C 500.7,256.0 563.3,261.0 584.0,262.0 L 584.0,210.0 C 563.3,209.0 500.7,204.0 460.0,204.0 C 419.3,204.0 380.0,210.0 340.0,210.0 C 300.0,210.0 260.7,204.0 220.0,204.0 C 179.3,204.0 116.7,209.0 96.0,210.0 Z" fill="rgba(196,150,90,0.16)" stroke="#8b6239" stroke-width="0.9"/>
+<path d="M 96.0,262.0 C 116.7,261.0 179.3,256.0 220.0,256.0 C 260.7,256.0 300.0,262.0 340.0,262.0 C 380.0,262.0 419.3,256.0 460.0,256.0 C 500.7,256.0 563.3,261.0 584.0,262.0" fill="none" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M 96.0,110.0 C 116.7,109.0 179.3,104.0 220.0,104.0 C 260.7,104.0 300.0,110.0 340.0,110.0 C 380.0,110.0 419.3,104.0 460.0,104.0 C 500.7,104.0 563.3,109.0 584.0,110.0" fill="none" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" stroke-dasharray="4 4"/>
+<path d="M 140.0,262.0 L 140.0,110.0" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+<path d="M 220.0,259.0 L 220.0,107.0" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+<path d="M 300.0,258.0 L 300.0,106.0" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+<path d="M 380.0,258.0 L 380.0,106.0" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+<path d="M 460.0,259.0 L 460.0,107.0" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+<path d="M 540.0,262.0 L 540.0,110.0" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+<path d="M 140.0,178.0 C 153.3,173.3 193.3,148.7 220.0,150.0 C 246.7,151.3 273.3,184.7 300.0,186.0 C 326.7,187.3 353.3,156.3 380.0,158.0 C 406.7,159.7 433.3,194.7 460.0,196.0 C 486.7,197.3 526.7,171.0 540.0,166.0" fill="none" stroke="#9b3b26" stroke-width="1.9" stroke-linecap="round"/>
+<circle cx="140.0" cy="178.0" r="2.6" fill="#9b3b26"/>
+<circle cx="220.0" cy="150.0" r="2.6" fill="#9b3b26"/>
+<circle cx="300.0" cy="186.0" r="2.6" fill="#9b3b26"/>
+<circle cx="380.0" cy="158.0" r="2.6" fill="#9b3b26"/>
+<circle cx="460.0" cy="196.0" r="2.6" fill="#9b3b26"/>
+<circle cx="540.0" cy="166.0" r="2.6" fill="#9b3b26"/>
+<text x="104.0" y="136.0" font-size="16" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">E</text>
+<text x="104.0" y="152.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">total space</text>
+<text x="600.0" y="266.0" font-size="16" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">M</text>
+<text x="600.0" y="282.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">base</text>
+<path d="M 626.0,150.0 Q 626.0,197.0 626.0,244.0" fill="none" stroke="#1a1208" stroke-width="1.4" stroke-linecap="round" marker-end="url(#q2ink)"/>
+<text x="634.0" y="200.0" font-size="14" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">π</text>
+<path d="M 388.0,136.0 Q 380.7,138.4 382.0,146.0" fill="none" stroke="#6b5a3e" stroke-width="1" stroke-linecap="round" marker-end="url(#q2fnt)"/>
+<text x="392.0" y="132.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">section σ</text>
+<path d="M 504.0,142.0 Q 487.6,152.8 468.0,152.0" fill="none" stroke="#6b5a3e" stroke-width="1" stroke-linecap="round" marker-end="url(#q2fnt)"/>
+<text x="508.0" y="138.0" font-size="12" font-family="'EB Garamond',Georgia,serif" fill="#6b5a3e">fibre </text><text x="552.6" y="138.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">E</text><text x="559.2" y="141.6" font-size="8.64" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">m</text>
+<path d="M 196.0,300.0 Q 212.6,281.1 236.0,272.0" fill="none" stroke="#8b6239" stroke-width="1" stroke-linecap="round" marker-end="url(#q2acc)"/>
+<text x="96.0" y="308.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">subbundle: smaller fibres, same base</text>
+<circle cx="300.0" cy="262.0" r="2.8" fill="#1a1208"/>
+<text x="295.0" y="280.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">m</text></g>
+</svg>

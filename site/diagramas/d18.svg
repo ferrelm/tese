@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 222" width="680" height="222" xmlns="http://www.w3.org/2000/svg">
+<title>The tangent map carries velocities to velocities</title>
+<desc>Two manifolds M and N joined by a map f. A curve drawn in M is carried to a curve in N; the velocity v of the first at a point p becomes the velocity Tf(v) of the second at f(p). Assembling these over all points gives the tangent map from TM to TN.</desc>
+<defs><marker id="r2ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="r2acc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="r2red" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="r2fnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<path d="M 70.0,150.0 C 64.0,134.3 81.0,109.7 96.0,96.0 C 111.0,82.3 138.3,69.7 160.0,68.0 C 181.7,66.3 211.7,74.0 226.0,86.0 C 240.3,98.0 249.3,124.0 246.0,140.0 C 242.7,156.0 225.0,173.7 206.0,182.0 C 187.0,190.3 154.7,195.3 132.0,190.0 C 109.3,184.7 76.0,165.7 70.0,150.0 Z" fill="rgba(138,188,155,0.13)" stroke="#a08050" stroke-width="1.1" stroke-linecap="round"/>
+<path d="M 420.0,146.0 C 417.3,129.7 434.7,104.0 452.0,92.0 C 469.3,80.0 499.7,73.0 524.0,74.0 C 548.3,75.0 583.0,85.0 598.0,98.0 C 613.0,111.0 620.3,136.3 614.0,152.0 C 607.7,167.7 584.3,185.7 560.0,192.0 C 535.7,198.3 491.3,197.7 468.0,190.0 C 444.7,182.3 422.7,162.3 420.0,146.0 Z" fill="rgba(138,188,155,0.13)" stroke="#a08050" stroke-width="1.1" stroke-linecap="round"/>
+<text x="70.0" y="206.0" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">M</text>
+<text x="600.0" y="208.0" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">N</text>
+<path d="M 96.0,158.0 C 103.7,152.3 126.3,127.0 142.0,124.0 C 157.7,121.0 176.0,142.0 190.0,140.0 C 204.0,138.0 220.0,116.7 226.0,112.0" fill="none" stroke="#9b3b26" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M 444.0,160.0 C 452.0,154.7 475.0,130.3 492.0,128.0 C 509.0,125.7 529.7,148.0 546.0,146.0 C 562.3,144.0 582.7,121.0 590.0,116.0" fill="none" stroke="#9b3b26" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="142.0" cy="124.0" r="3" fill="#9b3b26"/>
+<circle cx="492.0" cy="128.0" r="3" fill="#9b3b26"/>
+<text x="126.0" y="116.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">p</text>
+<text x="470.0" y="120.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">f(p)</text>
+<path d="M 142.0,124.0 Q 164.0,117.0 186.0,110.0" fill="none" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round" marker-end="url(#r2ink)"/>
+<text x="190.0" y="104.0" font-size="13" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">v</text>
+<path d="M 492.0,128.0 Q 516.0,122.0 540.0,116.0" fill="none" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round" marker-end="url(#r2ink)"/>
+<text x="544.0" y="110.0" font-size="13" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">Tf(v)</text>
+<path d="M 266.0,138.0 Q 335.0,124.0 404.0,138.0" fill="none" stroke="#1a1208" stroke-width="1.4" stroke-linecap="round" marker-end="url(#r2ink)"/>
+<text x="335.0" y="110.0" font-size="15" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208" text-anchor="middle">f</text>
+<text x="335.0" y="166.0" font-size="10.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e" text-anchor="middle">the curve is carried over,</text>
+<text x="335.0" y="180.0" font-size="10.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e" text-anchor="middle">and with it its velocity</text>
+</svg>

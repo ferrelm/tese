@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 680 268" width="680" height="268" xmlns="http://www.w3.org/2000/svg">
+<title>Frobenius' theorem: when a field of planes fits together into surfaces and when it does not</title>
+<desc>On the left, plane elements all lying in a stack of parallel surfaces: the distribution is involutive and therefore integrable, and the surfaces are the leaves of a foliation. On the right, plane elements that rotate steadily as one moves along a direction: no surface can be tangent to all of them, the bracket of two fields lying in the distribution leaves it, and there is no foliation.</desc>
+<defs><marker id="q4ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q4acc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q4red" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="q4fnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g transform="translate(0,-58)"><polygon points="46,252 226,252 278,214 98,214" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<polygon points="46,196 226,196 278,158 98,158" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<polygon points="46,140 226,140 278,102 98,102" fill="rgba(150,175,215,0.10)" stroke="#a08050" stroke-width="0.9"/>
+<g transform="translate(120,232) rotate(0)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#5c3d1e" stroke-width="1.2"/></g>
+<g transform="translate(196,176) rotate(0)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#5c3d1e" stroke-width="1.2"/></g>
+<g transform="translate(150,120) rotate(0)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#5c3d1e" stroke-width="1.2"/></g>
+<text x="46.0" y="110.0" font-size="12.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">E is involutive</text>
+<text x="46.0" y="300.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">the planes are tangent to a stack of surfaces:</text>
+<text x="46.0" y="314.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">there is a foliation, and each plane is a leaf's tangent</text>
+<g transform="translate(404,236) rotate(0)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#8b6239" stroke-width="1.2"/></g>
+<g transform="translate(462,214) rotate(-20)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#8b6239" stroke-width="1.2"/></g>
+<g transform="translate(520,192) rotate(-40)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#8b6239" stroke-width="1.2"/></g>
+<g transform="translate(578,170) rotate(-60)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#8b6239" stroke-width="1.2"/></g>
+<g transform="translate(632,148) rotate(-80)"><polygon points="-24,7 24,7 34,-9 -14,-9" fill="rgba(155,59,38,0.18)" stroke="#8b6239" stroke-width="1.2"/></g>
+<path d="M 392.0,262.0 Q 520.6,244.5 632.0,178.0" fill="none" stroke="#6b5a3e" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 3"/>
+<text x="392.0" y="110.0" font-size="12.5" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">E is not involutive</text>
+<text x="392.0" y="300.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">the planes twist as one moves along: no surface is</text>
+<text x="392.0" y="314.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">tangent to them, and the bracket [X,Y] escapes E</text>
+<path d="M 356.0,110.0 L 356.0,290.0" stroke="#a08050" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="3 4" opacity="0.6" fill="none"/></g>
+</svg>

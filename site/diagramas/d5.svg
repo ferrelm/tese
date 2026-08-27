@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><svg role="img" viewBox="0 0 240 130" width="240" height="130" xmlns="http://www.w3.org/2000/svg">
+  <title>Two vectors of TM differing by a vector along the leaf</title>
+  <desc>From one and the same point issue the vectors X1 and X2; the difference X1 minus X2 is vertical, that is, it lies along the leaf, and it is that component which the quotient removes.</desc>
+  <defs><marker id="e8ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="e8acc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <path d="M 40,20 L 40,112" stroke="#a08050" stroke-width="1.1"/>
+  <circle cx="60" cy="72" r="2.6" fill="#1a1208"/>
+  <path d="M 60,72 L 168,40" fill="none" stroke="#1a1208" stroke-width="1.5" stroke-linecap="round" marker-end="url(#e8ink)"/>
+  <path d="M 60,72 L 168,104" fill="none" stroke="#1a1208" stroke-width="1.5" stroke-linecap="round" marker-end="url(#e8ink)"/>
+  <path d="M 176,104 L 176,44" fill="none" stroke="#8b6239" stroke-width="1.3" stroke-dasharray="5 3" stroke-linecap="round" marker-end="url(#e8acc)"/>
+  <text x="174" y="34" font-size="13" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">X</text>
+  <text x="183" y="38" font-size="9.4" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">1</text>
+  <text x="174" y="120" font-size="13" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">X</text>
+  <text x="183" y="124" font-size="9.4" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#1a1208">2</text>
+  <text x="190" y="78" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">X</text>
+  <text x="199" y="82" font-size="8.6" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">1</text>
+  <text x="205" y="78" font-size="12" font-family="'EB Garamond',Georgia,serif" fill="#5c3d1e">−</text>
+  <text x="215" y="78" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">X</text>
+  <text x="224" y="82" font-size="8.6" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">2</text>
+  </svg>
