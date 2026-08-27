@@ -785,6 +785,105 @@
 </div>
 
 
+<!-- COMMENTARY (editorial, 2026) -->
+<div class="page">
+  <h2 class="section">The argument, explained</h2>
+
+  <p class="lede">A commentary, written in 2026, for a reader who wants more than the narrative gives and less than the mathematics assumes. It follows the paper in order, and it may be read instead of the seven pages above or alongside them.</p>
+
+  <h3 class="subsection">1. What the form measures</h3>
+
+  <p>Begin with units, which settle the matter faster than any philosophy. A point of a phase space is a position together with a momentum. Ask for the <em>length</em> of a direction there and you are asking to add metres to kilogram-metres per second: the question has no answer. But take two directions, one carrying a little position and the other a little momentum, and multiply them, and the result is metres × kg·m/s — action. That combination is dimensionally sound, and it is essentially the only one that is. An instrument on a phase space therefore cannot sensibly be handed a single direction. The smallest thing it can be handed is two, one to pair against the other.</p>
+
+  <p>What it returns is the area of the parallelogram those two directions span, signed, so that swapping them reverses it. In coordinates \(\omega=\sum_i dq^i\wedge dp_i\) says exactly this: take the parallelogram, cast its shadow on each \((q^i,p_i)\) plane, measure the area of each shadow, add them up. And the property that looks like an odd axiom stops looking odd. Hand the instrument the same direction twice and the parallelogram is flat, so the area is zero. Antisymmetry is not a stipulation; it is what area means.</p>
+
+  <p>So the quantity being measured is action, position against momentum. Symplectic geometry is the geometry of action in the way that Riemannian geometry is the geometry of length, and the difference between the two subjects is already visible here, in what their instruments will and will not accept.</p>
+
+  <h3 class="subsection">2. How a quantity becomes a motion</h3>
+
+  <p>An observable is a function on the space of states: energy, a coordinate, a component of momentum. Mechanics needs each observable to generate a motion — the energy generates time evolution, a momentum generates translation — and the equation that does this is the one the manuscript writes on its first page,</p>
+
+  <div class="math-block centered">\[\iota_X\omega=dg.\]</div>
+
+  <p>Read it as a question rather than a formula. On the right, \(dg\) is the steepness meter of the observable: hand it a direction and it reports how fast \(g\) changes if you move that way. On the left, \(X\) has been slotted into the first place of the instrument and the second left open, so what remains also eats one direction and returns a number. The equation asks for the direction \(X\) whose pairing with anything at all reproduces the rate of change of \(g\) in that direction.</p>
+
+  <p>This is why a two-slot instrument is needed and not a one-slot one, quite apart from the units. To pass from \(dg\), which eats a direction, to \(X\), which is a direction, requires a dictionary between the two kinds of object — and a dictionary is precisely a machine with two slots, since filling one leaves something of the other kind. A metric is such a dictionary too. The only difference is that a metric is symmetric, and that single difference decides everything that follows.</p>
+
+  <p>With a metric, the same recipe produces the gradient, which climbs straight across the level sets of \(g\). With \(\omega\), the answer is turned through a quarter turn and runs along them. The proof is one line: \(dg(X)=\omega(X,X)=0\), because the instrument returns zero on a repeated direction. So the motion an observable generates leaves that observable unchanged. Energy is conserved because \(\omega\) is antisymmetric — not as a consequence of some further principle, but as a restatement of what the instrument is.</p>
+
+  <p>In canonical coordinates, unwinding the contraction turns the one line into \(\dot q^i=\partial g/\partial p_i\) and \(\dot p_i=-\partial g/\partial q^i\): Hamilton's equations, when \(g\) is the energy. The coordinate-free equation is not an elegant repackaging of the coordinate ones. It is the statement of which the coordinate ones are a shadow.</p>
+
+  <h3 class="subsection">3. The bracket, and why the paper wants an algebra</h3>
+
+  <p>Once every observable names a motion, two observables can be paired: let one generate a motion and ask how fast the other changes along it. That is the Poisson bracket, \(\{f,g\}=\omega(X_f,X_g)\), and with it the observables stop being a mere list of measurable quantities and become an algebraic structure in their own right.</p>
+
+  <p>Four things live in that structure, and none of them survives without it. The evolution of any observable is \(df/dt=\{f,H\}\), so the bracket is not a description of the motion but the motion itself. An observable is conserved exactly when its bracket with the energy vanishes, which is where conservation laws come from. The changes of description that deserve to be called legitimate are the ones that preserve the bracket, and they are called canonical for that reason. And the bracket is the structure that canonical quantisation carries over into the commutator, which is why a classical theory without a well-defined bracket has nowhere to be quantised to.</p>
+
+  <p>One property of the bracket is worth isolating, because it will be the hinge of the whole first half. The Jacobi identity — the statement that makes the observables a Lie algebra rather than merely an antisymmetric product — holds precisely because \(d\omega=0\). Closure of the form is not a technical hypothesis inherited from the definition. It is the reason the algebra closes.</p>
+
+  <h3 class="subsection">4. Where it breaks</h3>
+
+  <p>Everything above rests on being able to solve \(\iota_X\omega=dg\) for \(X\), and that inversion is possible because \(\omega\) is non-degenerate: no direction is invisible to it. The paper's first move is to ask what survives when that assumption is dropped, and its answer is a deliberately small example — three variables, an observable that ignores one of them, and a form whose matrix has a row and a column of zeros.</p>
+
+  <p>The failure is immediate and it is not subtle. The field is no longer unique. One may add to it any multiple of the direction the form cannot see and the equation is satisfied just as well, because the addition contributes nothing when paired with anything. What the observable names is no longer a motion but a whole family of motions, and the bracket, which was built by following one of them, gives a different answer depending on which member is chosen. The margin of that page puts it more bluntly than the text: for each \(dg\) there is no unique \(X_g\).</p>
+
+  <p>A degenerate form is not a pathology invented to make the problem interesting. It is what one is handed by any description with more variables than the system has degrees of freedom — by a Lagrangian whose Legendre transform cannot be inverted, or by a system with constraints. The afterword takes that up; here it is enough to say that the case being studied is the ordinary one, not the exotic one.</p>
+
+  <h3 class="subsection">5. What the extra freedom actually is</h3>
+
+  <p>The turn in the argument comes from looking at the ambiguity rather than lamenting it. The directions that may be added freely are exactly the directions along which the observables in question do not change. Slide along one of them and every measurement returns what it returned before. Two points joined by such a direction are not two states; they are one state, written twice.</p>
+
+  <p>That observation converts an obstruction into a programme. If the ambiguity lies entirely in directions along which nothing measurable varies, then it is the description that is redundant, not the physics that is undetermined. And the bracket, which was ill-defined in general, is perfectly well defined on the observables whose differentials annihilate those directions: altering \(X_g\) by an invisible vector \(k\) alters \(\{f,g\}\) by \(df(k)\), which vanishes for exactly such observables. The class of quantities for which mechanics still works is therefore identified before any construction is carried out.</p>
+
+  <h3 class="subsection">6. Why the blindness is organised</h3>
+
+  <p>What remains is to show that the redundancy has a shape. Two hypotheses do the work, and the paper is careful about both.</p>
+
+  <p>The first is constant rank: the number of invisible directions must be the same at every point. The manuscript justifies this in the language of the example — otherwise the number of degrees of freedom would vary from place to place — and it is what makes the kernel a subbundle rather than a collection of unrelated subspaces.</p>
+
+  <p>The second is the one that matters more. Given a field of invisible directions, do they fit together into surfaces, or do they twist as one moves along? The test is to take two fields lying in the kernel and ask whether their bracket lies there too, and the computation is the one on page 2:</p>
+
+  <div class="math-block centered">\[\iota_{[X,Y]}\omega=\mathcal{L}_X\iota_Y\omega-\iota_Yd\iota_X\omega-\iota_Y\iota_X\,d\omega=0.\]</div>
+
+  <p>Each of the first two terms vanishes because \(X\) and \(Y\) are invisible. The third would not vanish for any old form, and it is the one that carries \(d\omega\). Closure kills it. Frobenius' theorem then converts the algebraic statement into a geometric one: the invisible directions are tangent to a family of surfaces which fill the space, a foliation, and each surface is a leaf.</p>
+
+  <p>It is worth pausing on what has just happened, because the paper does not pause. Closure entered the definition of a symplectic form as one of three conditions, alongside antisymmetry and non-degeneracy. Non-degeneracy has been dropped. Antisymmetry gave conservation. And closure, which might have looked like the least consequential of the three, turns out to be the one holding the repair together: without it the redundancy would not organise itself, and there would be nothing to quotient by.</p>
+
+  <h3 class="subsection">7. The double quotient</h3>
+
+  <p>Now the construction. Two elements of \(TM\) are declared equivalent when their difference is invisible, \(\iota_{(X_1-X_2)}\omega=0\), which removes the components along the leaves. And the leaves themselves are removed by declaring equivalent the points on which the admissible observables agree — all the points of \(f^{-1}(c)\), for \(c\) a regular value. What results is written \(TM/N\), and its base is again a symplectic manifold: on it nothing is invisible, and the bracket, the canonical transformations and the rest of the apparatus are available once more.</p>
+
+  <p>The move deserves to be stated in the way the narrative states it, because it is easy to misread as a repair of the form. Nothing was repaired. What the form could not see was removed, and what remains is a space on which there is nothing it cannot see. The observables that survive the passage are precisely the ones that were constant along the leaves to begin with — which is to say, the ones for which the bracket already made sense.</p>
+
+  <p>Two honest limits. The construction is local: the space of leaves carries a topology always, but it is a manifold only under further hypotheses, and the paper works where Frobenius works. And constant rank is a hypothesis, not a theorem; the afterword shows a case of real importance in which it fails.</p>
+
+  <h3 class="subsection">8. What an equation of motion is</h3>
+
+  <p>The second half of the paper begins from an irritation of a different kind. Acceleration is the rate of change of velocity, and on a manifold one cannot differentiate twice without coordinates creeping back in. The remedy is to give velocities a space of their own. A point of \(TM\) is a position together with a velocity; a motion becomes a curve drawn in \(TM\); and an equation of motion becomes a vector field there, an arrow at every such pair saying where to go next.</p>
+
+  <p>But most fields on \(TM\) are not equations of motion, and saying why takes some care. A curve in \(TM\) moves two things at once, the position slot and the velocity slot, and nothing whatever forces the second to be the derivative of the first. A curve whose velocity slot reads five while its position stands still is a perfectly good curve and a nonsensical motion. The condition that excludes it is the content of Abraham's definition, and the geometry that expresses it is the observation the manuscript is built on.</p>
+
+  <p>The observation is that \(TTM\) comes back down to \(TM\) in two different ways. One of them, \(\tau_{TM}\), remembers the pair the arrow is attached to and forgets the arrow: it flattens the whole fibre onto its base point. The other, \(T\tau_M\), pushes the arrow down to \(M\) and reads it there as a velocity, keeping only what the manuscript calls the horizontal part. These are different maps, and treating them as one is the mistake that makes the second-order condition look mysterious. Demanding that they agree on the image of \(X\),</p>
+
+  <div class="math-block centered">\[T\tau_M\circ X=\mathrm{Id}_{TM},\]</div>
+
+  <p>is exactly the demand that the velocity slot hold the derivative of the position slot. The rhombic diagram on page 5 is the bookkeeping for that sentence, and the two curves marked ① and ② on page 6 are the two readings applied to one and the same integral curve: the field is a second-order equation when, and only when, they coincide.</p>
+
+  <p>The last page pays this off in coordinates. The system marked \((*)\) computes both projections in local terms and forces \(X_1(u,e)=e\) — the first slot of the field must be the velocity itself, which is the coordinate form of the whole condition. What is left is</p>
+
+  <div class="math-block centered">\[\frac{d^2}{dt^2}u(c(t))=X_2\bigl(u(c(t)),e(c'(t))\bigr),\]</div>
+
+  <p>Newton's second law, obtained without ever having chosen coordinates and only then written in them.</p>
+
+  <h3 class="subsection">9. What the two halves have to do with each other</h3>
+
+  <p>They are not two papers bound together, though the manuscript does not argue the connection. Both halves are about doing mechanics without coordinates and finding out what the geometry will and will not supply. The first finds that the geometry supplies less than expected when the form degenerates, and repairs the loss by removing redundancy. The second finds that the geometry supplies more than expected — that the distinction between a curve in \(TM\) and a motion is already written into the two projections of \(TTM\), waiting to be noticed.</p>
+
+  <p>And the two meet in the place the afterword describes. A degenerate Lagrangian is what produces a degenerate form; the Legendre transform, which carries velocities to momenta, is the bridge between the space where the second half works and the space where the first half does. A reader who wants to see where all of it leads should turn there.</p>
+
+  <div class="nota"><strong>Editorial note:</strong> this commentary is an addition of 2026 and is no part of the 1993 manuscript. Where it says what the manuscript does not, it says so.</div>
+</div>
+
 <!-- AFTERWORD (editorial, 2026) -->
 <div class="page">
   <h2 class="section">Afterword — where this leads</h2>
