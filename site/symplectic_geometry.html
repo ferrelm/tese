@@ -857,6 +857,14 @@
 
   <p>The first is constant rank: the number of invisible directions must be the same at every point. The manuscript justifies this in the language of the example — otherwise the number of degrees of freedom would vary from place to place — and it is what makes the kernel a subbundle rather than a collection of unrelated subspaces.</p>
 
+  <div class="defn-box">
+    <span class="label">Counter-example — a rank that jumps</span>
+    The hypothesis is easy to read as a technical convenience. It is not. On \(\mathbb{R}^4\) with coordinates \((x,y,z,w)\) take
+    <div class="math-block centered">\[\omega=dx\wedge dy+z\,dz\wedge dw.\]</div>
+    <p style="margin:0;">It is closed — \(d\omega=dz\wedge dz\wedge dw=0\) — so it is a presymplectic form of exactly the kind the work studies. Its matrix is block diagonal with determinant \(z^2\): wherever \(z\neq0\) the form is non-degenerate and the kernel is zero, and on the wall \(z=0\) the rank falls to \(2\) and the kernel jumps to the plane spanned by \(\partial_z\) and \(\partial_w\). The invisible directions appear out of nowhere along that wall and are gone on either side of it.</p>
+    <p style="margin:.7rem 0 0;">Nothing that follows could then even be stated. The union of the kernels is not a subbundle, so it is not a distribution and Frobenius has nothing to apply to; with no leaves there is no leaf space and no base; and \(TM/N\) is not a bundle, since dividing each fibre by a subspace whose dimension changes from point to point does not leave fibres of a common dimension. Constant rank is not making the argument tidier. It is what gives the argument objects to be about.</p>
+  </div>
+
   <p>The second is the one that matters more. Given a field of invisible directions, do they fit together into surfaces, or do they twist as one moves along? The test is to take two fields lying in the kernel and ask whether their bracket lies there too, and the computation is the one on page 2:</p>
 
   <div class="math-block centered">\[\iota_{[X,Y]}\omega=\mathcal{L}_X\iota_Y\omega-\iota_Yd\iota_X\omega-\iota_Y\iota_X\,d\omega=0.\]</div>
