@@ -863,7 +863,31 @@
 
   <p>So the quantity being measured is action, position against momentum. Symplectic geometry is the geometry of action in the way that Riemannian geometry is the geometry of length, and the difference between the two subjects is already visible here, in what their instruments will and will not accept.</p>
 
-  <p>The difference has a consequence worth stating early, because the wrong picture of it is easy to carry through everything that follows. A metric has a local invariant: measure lengths and angles inside a small patch and you can tell a sphere from a plane without ever leaving the patch. That invariant is curvature. A symplectic form has nothing of the kind. Darboux's theorem says that around every point there are coordinates in which \(\omega\) takes one fixed constant shape, so any two symplectic manifolds of the same dimension are indistinguishable close up. There is no symplectic curvature — not a curvature that happens to vanish, but no such quantity to be defined. Phase spaces are manifolds on account of their shape in the large, not their bending: the angle of a pendulum returns to where it started, so its phase space is a cylinder and not a plane. Where curvature does enter mechanics it enters from elsewhere — the kinetic energy is a metric on the space of configurations, and it is that metric, downstairs, whose geodesics appear in the second half of this work under the name of a spray.</p>
+  <p>So far that is a statement about units, and it would be a thin thing if it stopped there. It does not. On
+  a cotangent bundle there is a 1-form nobody has to choose, \(\theta=\sum_i p_i\,dq^i\), and \(\omega=-d\theta\).
+  Stokes' theorem then says</p>
+
+  <div class="math-block centered">\[\iint_\Sigma\omega=-\oint_{\partial\Sigma}p\,dq,\]</div>
+
+  <p>and the right-hand side is the action accumulated along the boundary. The area the instrument measures
+  inside a patch of phase space is the action of a walk once round its rim. The smallest case makes it concrete:
+  a rectangle of sides \(\Delta q\) and \(\Delta p\) has \(\omega\)-area \(\Delta q\,\Delta p\), and
+  going round its boundary the vertical edges contribute nothing, since \(dq=0\) along them, while the lower
+  edge gives \(p_0\,\Delta q\) and the upper one, traversed backwards, \(-(p_0+\Delta p)\Delta q\) — in sum
+  \(-\Delta p\,\Delta q\). The same number, up to the sign the orientation fixes.</p>
+
+  <p>The slogan therefore has a consequence that can be checked against physics. The old quantization condition
+  is \(\oint p\,dq=nh\), and \(h\) carries the dimensions of action: what it discretises is exactly the area
+  \(\omega\) measures, so that a quantum state occupies a cell of area \(h\) in phase space. Planck's constant
+  is a quantum of symplectic area. Riemannian geometry measures length and ordinary quantum mechanics has no
+  quantum of length; symplectic geometry measures action, and there is one.</p>
+
+  <p>One qualification. \(\theta\) exists globally only where \(\omega\) is exact, which on a cotangent
+  bundle it always is — the case of mechanics. On a compact symplectic manifold it never is, and there the
+  action of a surface is defined only up to the periods of \(\omega\). Those periods are what the integrality
+  condition of geometric quantization is about.</p>
+
+  <p>The contrast with Riemannian geometry has a further consequence worth stating early, because the wrong picture of it is easy to carry through everything that follows. A metric has a local invariant: measure lengths and angles inside a small patch and you can tell a sphere from a plane without ever leaving the patch. That invariant is curvature. A symplectic form has nothing of the kind. Darboux's theorem says that around every point there are coordinates in which \(\omega\) takes one fixed constant shape, so any two symplectic manifolds of the same dimension are indistinguishable close up. There is no symplectic curvature — not a curvature that happens to vanish, but no such quantity to be defined. Phase spaces are manifolds on account of their shape in the large, not their bending: the angle of a pendulum returns to where it started, so its phase space is a cylinder and not a plane. Where curvature does enter mechanics it enters from elsewhere — the kinetic energy is a metric on the space of configurations, and it is that metric, downstairs, whose geodesics appear in the second half of this work under the name of a spray.</p>
 
   <h3 class="subsection" id="c2">2. How a quantity becomes a motion</h3>
 
