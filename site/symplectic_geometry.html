@@ -68,6 +68,7 @@
     font-size: .92rem; line-height: 1.65; color: var(--ink-light); }
   .gloss b { font-weight: 500; font-style: italic; color: var(--accent); }
   .gloss:target { background: rgba(200,170,100,.22); box-shadow: 0 0 0 .35rem rgba(200,170,100,.22); }
+  .diag:target { border-color: var(--accent); box-shadow: 0 0 0 .35rem rgba(200,170,100,.22); }
   .gterm { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--rule); }
   .gterm:hover { border-bottom-color: var(--accent); }
   .ms { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.2rem 0 .6rem; }
@@ -807,6 +808,8 @@
 
   <p>So the quantity being measured is action, position against momentum. Symplectic geometry is the geometry of action in the way that Riemannian geometry is the geometry of length, and the difference between the two subjects is already visible here, in what their instruments will and will not accept.</p>
 
+  <p>The difference has a consequence worth stating early, because the wrong picture of it is easy to carry through everything that follows. A metric has a local invariant: measure lengths and angles inside a small patch and you can tell a sphere from a plane without ever leaving the patch. That invariant is curvature. A symplectic form has nothing of the kind. Darboux's theorem says that around every point there are coordinates in which \(\omega\) takes one fixed constant shape, so any two symplectic manifolds of the same dimension are indistinguishable close up. There is no symplectic curvature — not a curvature that happens to vanish, but no such quantity to be defined. Phase spaces are manifolds on account of their shape in the large, not their bending: the angle of a pendulum returns to where it started, so its phase space is a cylinder and not a plane. Where curvature does enter mechanics it enters from elsewhere — the kinetic energy is a metric on the space of configurations, and it is that metric, downstairs, whose geodesics appear in the second half of this work under the name of a spray.</p>
+
   <h3 class="subsection">2. How a quantity becomes a motion</h3>
 
   <p>An observable is a function on the space of states: energy, a coordinate, a component of momentum. Mechanics needs each observable to generate a motion — the energy generates time evolution, a momentum generates translation — and the equation that does this is the one the manuscript writes on its first page,</p>
@@ -1015,7 +1018,7 @@
 
   <h3 class="subsection">Manifolds and maps</h3>
   <div class="gloss" id="gl-manifold"><b>manifold</b> — A space that, seen close up, looks like ordinary flat space but need not look like it as a whole — a sphere, a torus, the set of all positions of a pendulum. It is where the states of the system live.</div>
-  <div class="gloss" id="gl-chart"><b>chart, local coordinates</b> — A way of naming the points of one patch of a manifold by lists of numbers. Charts are the price of curvature: no single one need cover everything, so a statement only counts as intrinsic if it survives a change of chart.</div>
+  <div class="gloss" id="gl-chart"><b>chart, local coordinates</b> — A way of naming the points of one patch of a manifold by lists of numbers. Charts are the price of global shape rather than of curvature — a flat torus still needs several of them, a curved paraboloid is covered by one — and no single chart need cover everything, so a statement only counts as intrinsic if it survives a change of chart.</div>
   <div class="gloss" id="gl-submanifold"><b>submanifold</b> — A subset of a manifold which is itself a manifold, the way a surface sits inside space.</div>
   <div class="gloss" id="gl-codimension"><b>codimension</b> — How many dimensions a submanifold is missing relative to what surrounds it: a surface in three-space has codimension one.</div>
   <div class="gloss" id="gl-regular-value"><b>regular value</b> — A value <i>c</i> of a function at which the differential does not vanish. Regular values are exactly the ones whose level sets are honest submanifolds.</div>
@@ -1087,7 +1090,7 @@
   <h2 class="section">Glossary — pictures</h2>
   <p>A dozen of the terms are better drawn than described. The captions link back to the informal glossary; the pictures are of the general notions, not of the particular objects of the work, which are drawn in their own place in the body.</p>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-manifold">
 <svg role="img" viewBox="0 0 680 296" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>A manifold covered by two charts, and the transition map between them</title>
 <desc>A curved patch M carrying two overlapping regions U and V. Each is carried by a chart, phi and psi, onto an open set of R^n drawn below; the shaded overlap appears in both images, and the map between those two images, psi after phi inverse, is the transition map, required to be smooth.</desc>
@@ -1117,7 +1120,7 @@
   <figcaption>A <a class="gterm" href="#gl-manifold">manifold</a> is a space that carries <a class="gterm" href="#gl-chart">charts</a>: each patch is named by coordinates, and where two patches overlap the two namings differ by a smooth transition map</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-bundle">
 <svg role="img" viewBox="0 0 680 232" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>A vector bundle: base, fibres, a section, and a subbundle inside it</title>
 <desc>A base M drawn as a line at the foot, with a fibre standing over each of several of its points and the whole assembled into the total space E, projected onto M by pi. A wavy curve crossing every fibre once is a section. A shaded band occupying the lower part of each fibre is a subbundle: the same base, smaller fibres.</desc>
@@ -1157,7 +1160,7 @@
   <figcaption><a class="gterm" href="#gl-base">Base</a>, <a class="gterm" href="#gl-fibre">fibre</a>, <a class="gterm" href="#gl-section">section</a> and <a class="gterm" href="#gl-subbundle">subbundle</a> — the picture the whole first part of the work leans on</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-tangent-bundle">
 <svg role="img" viewBox="0 0 680 246" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>The tangent bundle of the circle is a cylinder</title>
 <desc>On the left a circle with tangent vectors drawn at five of its points. On the right the same data assembled into a cylinder: each vertical line is the fibre over one point of the circle, the dashed middle circle is the zero section, and a wavy closed curve running around the cylinder is a vector field on the circle seen as a section of the bundle.</desc>
@@ -1193,7 +1196,7 @@
   <figcaption>The <a class="gterm" href="#gl-tangent-bundle">tangent bundle</a> of the circle: a point together with a velocity, and the two of them assembled into a cylinder</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-frobenius">
 <svg role="img" viewBox="0 0 680 268" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>Frobenius' theorem: when a field of planes fits together into surfaces and when it does not</title>
 <desc>On the left, plane elements all lying in a stack of parallel surfaces: the distribution is involutive and therefore integrable, and the surfaces are the leaves of a foliation. On the right, plane elements that rotate steadily as one moves along a direction: no surface can be tangent to all of them, the bracket of two fields lying in the distribution leaves it, and there is no foliation.</desc>
@@ -1221,7 +1224,7 @@
   <figcaption><a class="gterm" href="#gl-frobenius">Frobenius' Theorem</a> in a picture: an <a class="gterm" href="#gl-involutive">involutive</a> field of planes is <a class="gterm" href="#gl-integrable">integrable</a> and gives a <a class="gterm" href="#gl-foliation">foliation</a>; a twisting one gives none</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-lie-bracket">
 <svg role="img" viewBox="0 0 680 218" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>The Lie bracket as the failure of two flows to commute</title>
 <desc>Four arrows form a quadrilateral: along the flow of X, then along the flow of Y, then back along X and back along Y. The path does not return to the starting point p; the dashed gap between the endpoint and p is, to second order in the time t, the bracket of X and Y.</desc>
@@ -1250,7 +1253,7 @@
   <figcaption>The <a class="gterm" href="#gl-lie-bracket">Lie bracket</a> is the gap by which the quadrilateral fails to close — which is why "the bracket stays inside E" is a condition about surfaces</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-hamiltonian">
 <svg role="img" viewBox="0 0 680 262" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>The Hamiltonian field runs along the level sets of H</title>
 <desc>Three nested closed curves are level sets of an observable H on a two-dimensional phase space. Arrows drawn at three points of the middle curve show the Hamiltonian field X_H, tangent to the curve; a further arrow crossing the levels is dH. Because the flow stays on a level set, H is constant along it, and so is any observable whose bracket with H vanishes.</desc>
@@ -1284,7 +1287,7 @@
   <figcaption>The <a class="gterm" href="#gl-hamiltonian">Hamiltonian field</a> of an <a class="gterm" href="#gl-observable">observable</a> runs along its level sets: conservation, and the reason the <a class="gterm" href="#gl-poisson">Poisson bracket</a> measures it</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-regular-value">
 <svg role="img" viewBox="0 0 680 262" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>Level sets at a regular value and at a critical value</title>
 <desc>The level sets of a function near a saddle. Away from the centre they are smooth curves, one for each regular value, and they stack up like a foliation. At the centre the differential vanishes: the level set through it is a pair of crossing curves, not a submanifold.</desc>
@@ -1312,7 +1315,7 @@
   <figcaption>At a <a class="gterm" href="#gl-regular-value">regular value</a> the level set is a <a class="gterm" href="#gl-submanifold">submanifold</a>, and the level sets stack up as a <a class="gterm" href="#gl-foliation">foliation</a>; at a critical value they cross and the stack breaks down</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-tangent-map">
 <svg role="img" viewBox="0 0 680 222" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>The tangent map carries velocities to velocities</title>
 <desc>Two manifolds M and N joined by a map f. A curve drawn in M is carried to a curve in N; the velocity v of the first at a point p becomes the velocity Tf(v) of the second at f(p). Assembling these over all points gives the tangent map from TM to TN.</desc>
@@ -1339,7 +1342,7 @@
   <figcaption>The <a class="gterm" href="#gl-tangent-map">tangent map</a> carries a curve, and with it its velocity — assembled over all points it gives the <a class="gterm" href="#gl-pushforward">pushforward</a> of a field</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-kernel">
 <svg role="img" viewBox="0 0 680 226" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>The kernel of a degenerate two-form</title>
 <desc>At one point, two vectors u and v span a parallelogram whose signed area is what the form returns. A third direction k pairs to zero with both, and with everything else: it lies in the kernel, invisible to the form. Non-degeneracy is the absence of any such direction.</desc>
@@ -1367,7 +1370,7 @@
   <figcaption><a class="gterm" href="#gl-nondeg">Non-degeneracy</a>, <a class="gterm" href="#gl-rank">rank</a> and <a class="gterm" href="#gl-kernel">kernel</a> at a single point: what the form sees, and what it does not</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-foliation">
 <svg role="img" viewBox="0 0 680 278" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>A foliation and its leaf space</title>
 <desc>On the left a region filled by parallel leaves, one of them highlighted. On the right the leaf space: each leaf has become a single point of a line, the highlighted leaf giving the highlighted point. The leaf space always has a topology but need not be a manifold.</desc>
@@ -1395,7 +1398,7 @@
   <figcaption>A <a class="gterm" href="#gl-foliation">foliation</a> and its <a class="gterm" href="#gl-leaf-space">leaf space</a>: each <a class="gterm" href="#gl-leaf">leaf</a> becomes one point, and the quotient is what page 4 constructs</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-vector-field">
 <svg role="img" viewBox="0 0 680 282" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>A vector field, its integral curves and its flow</title>
 <desc>Small arrows give the value of a vector field over a region. Three curves run everywhere tangent to them: they are integral curves. A shaded blob is carried by the flow, in a time t, to the dashed blob further along; the rate of change of a quantity under this transport is the Lie derivative.</desc>
@@ -1451,7 +1454,7 @@
   <figcaption>A <a class="gterm" href="#gl-vector-field">vector field</a>, its <a class="gterm" href="#gl-integral-curve">integral curves</a> and its flow — along which the <a class="gterm" href="#gl-lie-derivative">Lie derivative</a> measures change</figcaption>
   </figure>
 
-  <figure class="diag">
+  <figure class="diag" id="pic-canonical">
 <svg role="img" viewBox="0 0 680 266" width="100%" xmlns="http://www.w3.org/2000/svg">
 <title>A canonical transformation preserves the symplectic form, and with it the area</title>
 <desc>A shaded disc in the q-p plane on the left, and on the right its image under a canonical transformation: bent out of shape but enclosing the same area, because in two dimensions the symplectic form is exactly area.</desc>
