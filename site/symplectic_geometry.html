@@ -48,7 +48,7 @@
     font-size: 1.05rem; text-align: right; color: var(--ink-faint); margin-top: 5rem; }
   .doc-meta { font-family: 'Cormorant Garamond', serif; font-size: .88rem;
     text-align: right; color: var(--ink-faint); margin-top: .25rem; }
-  h2.<a class="gterm" href="#gl-section">section</a> {
+  h2.section {
     font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
     font-weight: 600; font-style: italic; color: var(--accent);
     border-bottom: 1px solid var(--rule); padding-bottom: .3rem;
@@ -94,6 +94,18 @@
   .page-num { position: absolute; top: 1.5rem; right: 2rem;
     font-family: 'Cormorant Garamond', serif; font-size: .85rem; color: var(--ink-faint); }
   .ornament { text-align: center; color: var(--rule); font-size: 1.2rem; margin: 1.8rem 0; letter-spacing: .6em; }
+  .toc-group { font-family: 'Cinzel', serif; font-size: .7rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--rule); margin: 1.7rem 0 .7rem;
+    border-bottom: 1px solid rgba(160,128,80,.3); padding-bottom: .3rem; }
+  .toc a { color: var(--ink-light); text-decoration: none; border-bottom: 1px solid transparent; }
+  .toc a:hover { border-bottom-color: var(--accent); }
+  .toc-line { display: flex; align-items: baseline; gap: .5rem; margin: .45rem 0;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; }
+  .toc-line .fill { flex: 1; border-bottom: 1px dotted rgba(160,128,80,.5); }
+  .toc-line .pages { font-size: .85rem; color: var(--ink-faint); white-space: nowrap; letter-spacing: .25em; }
+  .toc-sub { margin: .15rem 0 .6rem 1.5rem; padding: 0; }
+  .toc-sub li { list-style: none; font-family: 'Cormorant Garamond', serif;
+    font-size: .92rem; color: var(--ink-faint); margin: .22rem 0; }
   /* diagram container */
   .diag { margin: 1.8rem 0; border: 1px solid rgba(160,128,80,.2);
     border-radius: 3px; background: rgba(245,238,220,.3); padding: .5rem; }
@@ -125,8 +137,51 @@
   <div><div class="doc-author">Luís Ferreira</div><div class="doc-meta">IST no. 31727 &nbsp;·&nbsp; 2 / 2 / 93</div></div>
 </div>
 
+<!-- CONTENTS (editorial, 2026) -->
+<div class="page" id="contents">
+  <h2 class="section">Contents</h2>
+
+  <div class="toc">
+    <div class="toc-line"><a href="#abstract">Abstract</a></div>
+
+    <div class="toc-group">The manuscript, 1993</div>
+    <div class="toc-line"><a href="#p1">Degeneracy of the Symplectic Form</a><span class="fill"></span><span class="pages"><a href="#p1">1</a> <a href="#p2">2</a> <a href="#p3">3</a> <a href="#p4">4</a></span></div>
+    <div class="toc-line"><a href="#p5">Second-Order Equation Defined Intrinsically</a><span class="fill"></span><span class="pages"><a href="#p5">5</a> <a href="#p6">6</a> <a href="#p7">7</a></span></div>
+
+    <div class="toc-group">Written in 2026</div>
+    <div class="toc-line"><a href="#motivation">Motivation</a></div>
+    <div class="toc-line"><a href="#route">The route I took</a></div>
+    <div class="toc-line"><a href="#argument">The argument, explained</a></div>
+    <ul class="toc-sub">
+      <li><a href="#c1">1. What the form measures</a></li>
+      <li><a href="#c2">2. How a quantity becomes a motion</a></li>
+      <li><a href="#c3">3. The bracket, and why the paper wants an algebra</a></li>
+      <li><a href="#c4">4. Where it breaks</a></li>
+      <li><a href="#c5">5. What the extra freedom actually is</a></li>
+      <li><a href="#c6">6. Why the blindness is organised</a></li>
+      <li><a href="#c7">7. The double quotient</a></li>
+      <li><a href="#c8">8. What an equation of motion is</a></li>
+      <li><a href="#c9">9. What the two halves have to do with each other</a></li>
+    </ul>
+    <div class="toc-line"><a href="#afterword">Afterword — where this leads</a></div>
+    <ul class="toc-sub">
+      <li><a href="#gauge">Gauge theories</a></li>
+      <li><a href="#relativity">General relativity</a></li>
+    </ul>
+
+    <div class="toc-group">Reference</div>
+    <div class="toc-line"><a href="#glossary-formal">Glossary — formal statements</a></div>
+    <div class="toc-line"><a href="#glossary">Glossary</a></div>
+    <div class="toc-line"><a href="#pictures">Glossary — pictures</a></div>
+    <div class="toc-line"><a href="#references">References</a></div>
+    <div class="toc-line"><a href="#facsimile">The manuscript in facsimile</a></div>
+  </div>
+
+  <div class="nota"><strong>Editorial note:</strong> the first group is the 1993 manuscript. Everything else was written in 2026.</div>
+</div>
+
 <!-- ABSTRACT (editorial, 2026) -->
-<div class="page">
+<div class="page" id="abstract">
   <div class="defn-box">
     <span class="label">Abstract</span>
     We examine what survives of symplectic geometry when the <a class="gterm" href="#gl-nondeg">non-degeneracy</a> of \(\omega\) is given up, and how far the <a class="gterm" href="#gl-algebra">algebra of observables</a> can still be built. Non-degeneracy is what makes \(\omega^\flat:TM\to T^*M\) an isomorphism, and therefore what assigns to each <a class="gterm" href="#gl-observable">observable</a> \(g\) a single field \(X_g\) with \(\iota_{X_g}\omega=dg\); once it fails, \(X_g\) is determined only up to the <a class="gterm" href="#gl-kernel">kernel</a> of \(\omega^\flat\) and the <a class="gterm" href="#gl-poisson">Poisson bracket</a> loses its meaning. We show that if \(\omega\) has constant <a class="gterm" href="#gl-rank">rank</a> the kernel is a <a class="gterm" href="#gl-subbundle">subbundle</a> of \(TM\) which, because \(\omega\) is closed, is <a class="gterm" href="#gl-involutive">involutive</a> and hence arises from a regular <a class="gterm" href="#gl-foliation">foliation</a>. Taking the quotient of \(TM\) by the kernel directions, and of \(M\) by the <a class="gterm" href="#gl-leaf">leaves</a>, yields a <a class="gterm" href="#gl-base">base</a> which is again a <a class="gterm" href="#gl-symplectic-manifold">symplectic manifold</a>, and on it the Poisson brackets, the <a class="gterm" href="#gl-canonical">canonical transformations</a> and the remaining structure are recovered. The second part takes up Abraham's intrinsic definition of a <a class="gterm" href="#gl-sode">second-order equation</a> [1] — a <a class="gterm" href="#gl-vector-field">vector field</a> \(X\) on \(TM\) with \(T\tau_M\circ X=\mathrm{Id}\) — exhibiting the rhombic diagram it obeys, the two distinct <a class="gterm" href="#gl-projection">projections</a> \(\tau_{TM}\) and \(T\tau_M\) of \(TTM\) onto \(TM\), and how the condition on the <a class="gterm" href="#gl-integral-curve">integral curves</a> reduces, in local coordinates, to the classical second-order equation of motion.
@@ -136,7 +191,7 @@
 </div>
 
 <!-- PAGE 1 -->
-<div class="page">
+<div class="page" id="p1">
   <div class="page-num">1</div>
   <h2 class="section">Degeneracy of the Symplectic Form</h2>
   <p>The features that define the symplectic form on a <a class="gterm" href="#gl-manifold">manifold</a> \(M\) are: <a class="gterm" href="#gl-closed">closedness</a>, <a class="gterm" href="#gl-skew">skew-symmetry</a> and non-degeneracy. The first two properties are both fundamental, and they come into play as follows: closedness and skew-symmetry will be essential for <a class="gterm" href="#gl-darboux">Darboux's Theorem</a> [1] and for setting up an algebra of observables through the Poisson brackets. Skew-symmetry gives rise to conservation properties, which extend to degenerate forms. Non-degeneracy can be weakened in such a way that we still establish the good properties in more general cases.</p>
@@ -157,7 +212,7 @@
 </div>
 
 <!-- PAGE 2 -->
-<div class="page">
+<div class="page" id="p2">
   <div class="page-num">2</div>
   <p>In order to set up an algebra of observables we have to remove this excess of possible fields. In our example the kernel of \(\omega\) consists of all vectors of the form \(\bigl(0,0,\lambda(u,y,z)\bigr)\), that is \(X(u,y,z)\tfrac{\partial}{\partial z}\). Applied to the observable \(g\), these vectors determine surfaces — lines, in this case — along which \(g\) is constant:</p>
   <div class="math-block centered">\[X\cdot g=X(u,y,z)\,\tfrac{\partial}{\partial z}\,g(u,y)=0.\]</div>
@@ -217,7 +272,7 @@
 </div>
 
 <!-- PAGE 3 -->
-<div class="page">
+<div class="page" id="p3">
   <div class="page-num">3</div>
   <p>So we now know that \(E\) arises from a regular foliation, that is: "for each \(m_0\in M\) there is a local submanifold \(N\subset M\), called a <em>leaf</em> of the foliation, which contains \(m_0\) and whose <a class="gterm" href="#gl-tangent-bundle">Tangent bundle</a> is exactly \(E\) restricted to \(N\)."</p>
   <div class="defn-box">
@@ -284,7 +339,7 @@
 </div>
 
 <!-- PAGE 4 -->
-<div class="page">
+<div class="page" id="p4">
   <div class="page-num">4</div>
   <p>only \(\omega\), since we have no metric. We can remove the unwanted fields by setting up an equivalence relation on \(TM\) and taking the quotient of \(TM\) by that relation. Two elements of \(TM\) are equivalent if</p>
   <div class="math-block centered">\[\sim\;:\quad \iota_{(X_1-X_2)}\,\omega(m)=0,\]</div>
@@ -317,7 +372,7 @@
 </div>
 
 <!-- PAGE 5 -->
-<div class="page">
+<div class="page" id="p5">
   <div class="page-num">5</div>
   <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
   <h2 class="section">Second-Order Equation Defined Intrinsically</h2>
@@ -414,7 +469,7 @@
 </div>
 
 <!-- PAGE 6 -->
-<div class="page">
+<div class="page" id="p6">
   <div class="page-num">6</div>
   <p>The canonical projection \(\tau_{TM}\) "flattens" the fibres onto the base \(TM\), whereas the projection \(T\tau_M\) projects only the <a class="gterm" href="#gl-vertical">"horizontal" part</a> of the fibre and the base \(M\).</p>
 
@@ -561,7 +616,7 @@
 </div>
 
 <!-- PAGE 7 -->
-<div class="page">
+<div class="page" id="p7">
   <div class="page-num">7</div>
 
   <div class="math-block">
@@ -594,7 +649,7 @@
 
 
 <!-- MOTIVATION (editorial, 2026) -->
-<div class="page">
+<div class="page" id="motivation">
   <h2 class="section">Motivation</h2>
 
   <p>A mechanical system is described by its observables — position, energy, momentum — but a list of measurable quantities is not yet physics. What turns it into physics is a bracket: a rule that takes two observables and returns a third. Given the energy \(H\), the bracket returns the rate of change of everything else, \(df/dt=\{f,H\}\), and the observables it sends to zero are the conserved ones. The same bracket decides which changes of description are legitimate — the canonical transformations are exactly those that preserve it — and it is the structure that canonical quantization carries over into the commutator [1, 2, 3]. Lose the bracket and one is left with a stage and no play.</p>
@@ -607,7 +662,7 @@
 </div>
 
 <!-- THE ROUTE (editorial, 2026, in the author's voice) -->
-<div class="page">
+<div class="page" id="route">
   <h2 class="section">The route I took</h2>
 
   <p>I did not set out to weaken anything. I set out to write down the algebra of observables, and found that I could not.</p>
@@ -800,7 +855,7 @@
 
   <p class="lede">A commentary, written in 2026, for a reader who wants more than the narrative gives and less than the mathematics assumes. It follows the paper in order, and it may be read instead of the seven pages above or alongside them.</p>
 
-  <h3 class="subsection">1. What the form measures</h3>
+  <h3 class="subsection" id="c1">1. What the form measures</h3>
 
   <p>Begin with units, which settle the matter faster than any philosophy. A point of a phase space is a position together with a momentum. Ask for the <em>length</em> of a direction there and you are asking to add metres to kilogram-metres per second: the question has no answer. But take two directions, one carrying a little position and the other a little momentum, and multiply them, and the result is metres × kg·m/s — action. That combination is dimensionally sound, and it is essentially the only one that is. An instrument on a phase space therefore cannot sensibly be handed a single direction. The smallest thing it can be handed is two, one to pair against the other.</p>
 
@@ -810,7 +865,7 @@
 
   <p>The difference has a consequence worth stating early, because the wrong picture of it is easy to carry through everything that follows. A metric has a local invariant: measure lengths and angles inside a small patch and you can tell a sphere from a plane without ever leaving the patch. That invariant is curvature. A symplectic form has nothing of the kind. Darboux's theorem says that around every point there are coordinates in which \(\omega\) takes one fixed constant shape, so any two symplectic manifolds of the same dimension are indistinguishable close up. There is no symplectic curvature — not a curvature that happens to vanish, but no such quantity to be defined. Phase spaces are manifolds on account of their shape in the large, not their bending: the angle of a pendulum returns to where it started, so its phase space is a cylinder and not a plane. Where curvature does enter mechanics it enters from elsewhere — the kinetic energy is a metric on the space of configurations, and it is that metric, downstairs, whose geodesics appear in the second half of this work under the name of a spray.</p>
 
-  <h3 class="subsection">2. How a quantity becomes a motion</h3>
+  <h3 class="subsection" id="c2">2. How a quantity becomes a motion</h3>
 
   <p>An observable is a function on the space of states: energy, a coordinate, a component of momentum. Mechanics needs each observable to generate a motion — the energy generates time evolution, a momentum generates translation — and the equation that does this is the one the manuscript writes on its first page,</p>
 
@@ -832,7 +887,7 @@
 
   <p>In canonical coordinates, unwinding the contraction turns the one line into \(\dot q^i=\partial g/\partial p_i\) and \(\dot p_i=-\partial g/\partial q^i\): Hamilton's equations, when \(g\) is the energy. The coordinate-free equation is not an elegant repackaging of the coordinate ones. It is the statement of which the coordinate ones are a shadow.</p>
 
-  <h3 class="subsection">3. The bracket, and why the paper wants an algebra</h3>
+  <h3 class="subsection" id="c3">3. The bracket, and why the paper wants an algebra</h3>
 
   <p>Once every observable names a motion, two observables can be paired: let one generate a motion and ask how fast the other changes along it. That is the Poisson bracket, \(\{f,g\}=\omega(X_f,X_g)\), and with it the observables stop being a mere list of measurable quantities and become an algebraic structure in their own right.</p>
 
@@ -840,7 +895,7 @@
 
   <p>One property of the bracket is worth isolating, because it will be the hinge of the whole first half. The Jacobi identity — the statement that makes the observables a Lie algebra rather than merely an antisymmetric product — holds precisely because \(d\omega=0\). Closure of the form is not a technical hypothesis inherited from the definition. It is the reason the algebra closes.</p>
 
-  <h3 class="subsection">4. Where it breaks</h3>
+  <h3 class="subsection" id="c4">4. Where it breaks</h3>
 
   <p>Everything above rests on being able to solve \(\iota_X\omega=dg\) for \(X\), and that inversion is possible because \(\omega\) is non-degenerate: no direction is invisible to it. The paper's first move is to ask what survives when that assumption is dropped, and its answer is a deliberately small example — three variables, an observable that ignores one of them, and a form whose matrix has a row and a column of zeros.</p>
 
@@ -848,13 +903,13 @@
 
   <p>A degenerate form is not a pathology invented to make the problem interesting. It is what one is handed by any description with more variables than the system has degrees of freedom — by a Lagrangian whose Legendre transform cannot be inverted, or by a system with constraints. The afterword takes that up; here it is enough to say that the case being studied is the ordinary one, not the exotic one.</p>
 
-  <h3 class="subsection">5. What the extra freedom actually is</h3>
+  <h3 class="subsection" id="c5">5. What the extra freedom actually is</h3>
 
   <p>The turn in the argument comes from looking at the ambiguity rather than lamenting it. The directions that may be added freely are exactly the directions along which the observables in question do not change. Slide along one of them and every measurement returns what it returned before. Two points joined by such a direction are not two states; they are one state, written twice.</p>
 
   <p>That observation converts an obstruction into a programme. If the ambiguity lies entirely in directions along which nothing measurable varies, then it is the description that is redundant, not the physics that is undetermined. And the bracket, which was ill-defined in general, is perfectly well defined on the observables whose differentials annihilate those directions: altering \(X_g\) by an invisible vector \(k\) alters \(\{f,g\}\) by \(df(k)\), which vanishes for exactly such observables. The class of quantities for which mechanics still works is therefore identified before any construction is carried out.</p>
 
-  <h3 class="subsection">6. Why the blindness is organised</h3>
+  <h3 class="subsection" id="c6">6. Why the blindness is organised</h3>
 
   <p>What remains is to show that the redundancy has a shape. Two hypotheses do the work, and the paper is careful about both.</p>
 
@@ -876,7 +931,7 @@
 
   <p>It is worth pausing on what has just happened, because the paper does not pause. Closure entered the definition of a symplectic form as one of three conditions, alongside antisymmetry and non-degeneracy. Non-degeneracy has been dropped. Antisymmetry gave conservation. And closure, which might have looked like the least consequential of the three, turns out to be the one holding the repair together: without it the redundancy would not organise itself, and there would be nothing to quotient by.</p>
 
-  <h3 class="subsection">7. The double quotient</h3>
+  <h3 class="subsection" id="c7">7. The double quotient</h3>
 
   <p>Now the construction. Two elements of \(TM\) are declared equivalent when their difference is invisible, \(\iota_{(X_1-X_2)}\omega=0\), which removes the components along the leaves. And the leaves themselves are removed by declaring equivalent the points on which the admissible observables agree — all the points of \(f^{-1}(c)\), for \(c\) a regular value. What results is written \(TM/N\), and its base is again a symplectic manifold: on it nothing is invisible, and the bracket, the canonical transformations and the rest of the apparatus are available once more.</p>
 
@@ -884,7 +939,7 @@
 
   <p>Two honest limits. The construction is local: the space of leaves carries a topology always, but it is a manifold only under further hypotheses, and the paper works where Frobenius works. And constant rank is a hypothesis, not a theorem; the afterword shows a case of real importance in which it fails.</p>
 
-  <h3 class="subsection">8. What an equation of motion is</h3>
+  <h3 class="subsection" id="c8">8. What an equation of motion is</h3>
 
   <p>The second half of the paper begins from an irritation of a different kind. Acceleration is the rate of change of velocity, and on a manifold one cannot differentiate twice without coordinates creeping back in. The remedy is to give velocities a space of their own. A point of \(TM\) is a position together with a velocity; a motion becomes a curve drawn in \(TM\); and an equation of motion becomes a vector field there, an arrow at every such pair saying where to go next.</p>
 
@@ -902,7 +957,7 @@
 
   <p>Newton's second law, obtained without ever having chosen coordinates and only then written in them.</p>
 
-  <h3 class="subsection">9. What the two halves have to do with each other</h3>
+  <h3 class="subsection" id="c9">9. What the two halves have to do with each other</h3>
 
   <p>They are not two papers bound together, though the manuscript does not argue the connection. Both halves are about doing mechanics without coordinates and finding out what the geometry will and will not supply. The first finds that the geometry supplies less than expected when the form degenerates, and repairs the loss by removing redundancy. The second finds that the geometry supplies more than expected — that the distinction between a curve in \(TM\) and a motion is already written into the two projections of \(TTM\), waiting to be noticed.</p>
 
@@ -912,12 +967,12 @@
 </div>
 
 <!-- AFTERWORD (editorial, 2026) -->
-<div class="page">
+<div class="page" id="afterword">
   <h2 class="section">Afterword — where this leads</h2>
 
   <p>The first part of this work assumes a degenerate \(\omega\) and asks what can be rescued. It is worth saying plainly where that situation occurs, because it is not a curiosity of the formalism: gauge theory is the main place in physics where exactly this happens, and the construction carried out on pages 2 to 4 is the geometric skeleton of how physicists deal with it.</p>
 
-  <h3 class="subsection">Gauge theories</h3>
+  <h3 class="subsection" id="gauge">Gauge theories</h3>
 
   <p>A gauge theory is a description with redundancy built in: many mathematical configurations stand for one and the same physical state. That redundancy is precisely what makes the form degenerate. The directions \(\omega\) cannot see are the directions in which the description changes and the physics does not — the gauge directions. Everything else follows the pattern of the preceding pages.</p>
 
@@ -927,7 +982,7 @@
 
   <p>Two things the treatment given here does not cover should be said. First, the constraint surface has to be found and not assumed: one starts from a degenerate Lagrangian, imposes a constraint, demands that it be preserved, obtains further constraints, and iterates until the process closes — the presymplectic form of that algorithm is due to Gotay, Nester and Hinds [4]. Second, not all degeneracy is gauge. Dirac's second-class constraints do not lie in the kernel, and they are handled the other way round: one restricts to them, the form becomes non-degenerate there, and what results is the Dirac bracket rather than a quotient. The construction of page 4 covers the first-class half.</p>
 
-  <h3 class="subsection">General relativity</h3>
+  <h3 class="subsection" id="relativity">General relativity</h3>
 
   <p>Gravity was put into this form early — by Dirac in the late 1950s, which is why the constraint machinery exists at all, and by Arnowitt, Deser and Misner [12], whose formulation is still the standard one. The spatial metric is the configuration variable, and the constraints are first class: one generates the diffeomorphisms of the slice, the other its deformation in time. The total Hamiltonian is itself a sum of constraints, which is where the difficulty with time in quantum gravity begins.</p>
 
@@ -939,7 +994,7 @@
 </div>
 
 <!-- FORMAL GLOSSARY (editorial, 2026) -->
-<div class="page">
+<div class="page" id="glossary-formal">
   <h2 class="section">Glossary — formal statements</h2>
   <p>Precise statements of the terms the work uses. \(M\) is a smooth manifold of dimension \(n\), everything is \(C^\infty\), and the sign conventions are the ones of the manuscript. A plain-language gloss of the same terms follows in the next section; it is there, and not here, that the terms in the body link to.</p>
 
@@ -1012,7 +1067,7 @@
 </div>
 
 <!-- GLOSSARY (editorial, 2026) -->
-<div class="page">
+<div class="page" id="glossary">
   <h2 class="section">Glossary</h2>
   <p>The same terms in plain language, for a reader who is not a differential geometer. Terms in the body of the work link here at their first appearance; the formal statement of each is in the preceding section, and the definitions given inside the work itself, in the boxes, take precedence over both.</p>
 
@@ -1086,7 +1141,7 @@
 </div>
 
 <!-- ILLUSTRATED GLOSSARY (editorial, 2026) -->
-<div class="page">
+<div class="page" id="pictures">
   <h2 class="section">Glossary — pictures</h2>
   <p>A dozen of the terms are better drawn than described. The captions link back to the informal glossary; the pictures are of the general notions, not of the particular objects of the work, which are drawn in their own place in the body.</p>
 
@@ -1484,7 +1539,7 @@
 </div>
 
 <!-- REFERENCES (editorial, 2026) -->
-<div class="page">
+<div class="page" id="references">
   <h2 class="section">References</h2>
 
   <div class="ref"><b>[1]</b> R. Abraham and J. E. Marsden, <em>Foundations of Mechanics</em>, 2nd ed., Benjamin/Cummings, Reading, Mass., 1978.</div>
@@ -1507,7 +1562,7 @@
 </div>
 
 <!-- THE MANUSCRIPT (facsimile, editorial 2026) -->
-<div class="page">
+<div class="page" id="facsimile">
   <h2 class="section">The manuscript</h2>
 
   <p>The seven pages as they were written: by hand, in Portuguese, in February 1993. Each thumbnail opens the page at full size, where the handwriting can be read and the original drawings can be seen as they were drawn — they are what the figures in this edition were made from, and in several places they say things the transcription cannot, in the margins and in the second colour of pen.</p>
