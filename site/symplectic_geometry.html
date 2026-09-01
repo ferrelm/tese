@@ -165,6 +165,7 @@
     </ul>
     <div class="toc-line"><a href="#afterword">Afterword — where this leads</a></div>
     <ul class="toc-sub">
+      <li><a href="#quantum">Quantum mechanics, and what the bracket is for</a></li>
       <li><a href="#gauge">Gauge theories</a></li>
       <li><a href="#relativity">General relativity</a></li>
     </ul>
@@ -1067,7 +1068,55 @@
 <div class="page" id="afterword">
   <h2 class="section">Afterword — where this leads</h2>
 
-  <p>The first part of this work assumes a degenerate \(\omega\) and asks what can be rescued. It is worth saying plainly where that situation occurs, because it is not a curiosity of the formalism: gauge theory is the main place in physics where exactly this happens, and the construction carried out on pages 2 to 4 is the geometric skeleton of how physicists deal with it.</p>
+  <p>The first part of this work assumes a degenerate \(\omega\) and asks what can be rescued. What is rescued is the bracket, so the first thing to say is what the bracket is for; and then where the situation occurs at all, because it is not a curiosity of the formalism: gauge theory is the main place in physics where exactly this happens, and the construction carried out on pages 2 to 4 is the geometric skeleton of how physicists deal with it.</p>
+
+  <h3 class="subsection" id="quantum">Quantum mechanics, and what the bracket is for</h3>
+
+  <p>The reason for insisting on the algebra of observables, through all the trouble the first part takes to
+  recover it, is that the algebra is what quantum mechanics inherits. Classical mechanics rests on an assumption
+  so natural that it is seldom stated: the system <em>is</em> somewhere. There is a point of phase space, and at
+  that point every observable has a value, all of them at once. Quantum mechanics gives that up. What it does not
+  give up is the structure built on top of it.</p>
+
+  <p>The translation is short. An observable, a function on \(M\), becomes a self-adjoint operator; the values
+  it can take, classically the values of the function, become the spectrum of the operator; a state, classically
+  a point, becomes a unit vector, and the value of an observable in a state becomes an expectation. The bracket
+  becomes the commutator, \(\{f,g\}\mapsto[\hat f,\hat g]/i\hbar\), which is what turns the canonical
+  bracket of a coordinate and its momentum into \([\hat q,\hat p]=i\hbar\). What is worth noticing is the
+  line that does not change: classically \(df/dt=\{f,H\}\), quantum mechanically
+  \(d\hat A/dt=[\hat A,\hat H]/i\hbar\). The equation of motion is the same equation, with the same \(H\),
+  written in the other bracket. Nothing is added; something is taken away.</p>
+
+  <p>What is taken away is exactly what the commentary measured at the outset. A classical state is a point, and
+  a point encloses no area; a quantum state cannot enclose less than \(h\). That one sentence is the uncertainty
+  principle: \(\Delta q\,\Delta p\ge\hbar/2\) follows from the commutator and says that squeezing a state
+  in one direction widens it in the other, because the area has a floor. Read backwards it is also why \(h\) had
+  to be smuggled into statistical mechanics before quantum mechanics existed — the number of states in a region of
+  phase space is its volume divided by \(h^n\), and without a grain the entropy of a gas comes out infinite. And
+  it is the whole content of the old Bohr–Sommerfeld rule \(\oint p\,dq=nh\): the permitted orbits are those
+  enclosing a whole number of cells.</p>
+
+  <p>The dictionary is not perfect, and its failures are precise rather than vague. To the product \(qp\) there
+  correspond both \(\hat q\hat p\) and \(\hat p\hat q\), which differ by \(i\hbar\); a symmetric choice
+  can be made, but it is a choice and not a translation. Worse, Groenewold and van Hove proved that no
+  quantization can be exact on all polynomials in \(q\) and \(p\) and irreducible at the same time: beyond
+  degree two the correspondence must break. And geometric quantization, the most careful attempt to do this
+  without coordinates, requires \([\omega]/2\pi\hbar\) to be an integral class — a condition on the periods
+  of \(\omega\). Not every symplectic manifold can be quantized at all, and the obstruction is topological.</p>
+
+  <p>For a degenerate \(\omega\) a question of order then arises, and it is the one the rest of this afterword
+  turns on. One may reduce first: build the space of leaves, as pages 2 to 4 do, and quantize that. Or one may
+  quantize first and impose the constraints on the states afterwards, which is Dirac's route [3] — the physical
+  states are those annihilated by the constraint operators, \(\hat C_a\psi=0\), the quantum counterpart of
+  admitting only those observables the kernel cannot see. The first is the cleaner and is usually impossible,
+  since the reduced space is seldom something one can work on; the second keeps the coordinates and pays for
+  them. The two do not agree in general, and the theorems that say when they do carry hypotheses that gravity
+  does not meet.</p>
+
+  <p>One thing should be said plainly, since the rest of this is a story of structure carrying over intact. All
+  of the above says how a state evolves and what probabilities to assign to a measurement. None of it says why a
+  measurement yields one outcome and not another. That question is untouched by anything in this work, and by
+  anything the bracket carries.</p>
 
   <h3 class="subsection" id="gauge">Gauge theories</h3>
 
