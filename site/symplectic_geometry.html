@@ -1132,9 +1132,110 @@
 
   <p>Gravity was put into this form early — by Dirac in the late 1950s, which is why the constraint machinery exists at all, and by Arnowitt, Deser and Misner [12], whose formulation is still the standard one. The spatial metric is the configuration variable, and the constraints are first class: one generates the <a class="gterm" href="#gl-diffeomorphism">diffeomorphisms</a> of the slice, the other its deformation in time. The total <a class="gterm" href="#gl-hamiltonian-fn">Hamiltonian</a> is itself a sum of constraints, which is where the difficulty with time in quantum gravity begins.</p>
 
+  <figure class="diag">
+<svg role="img" viewBox="0 0 680 310" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>The 3+1 split: spacetime cut into spatial slices, with lapse and shift</title>
+<desc>Three stacked parallelograms are successive spatial slices of spacetime. From a point on the lower slice a vertical arrow labelled N dt rises to the height of the next slice, and a horizontal arrow labelled N to the i, dt runs along to the corresponding point; a dashed line joins the two points directly. Notes at the right name the spatial metric as the configuration variable, its momentum as built from the extrinsic curvature, and the lapse and shift as the gauge freedom.</desc>
+<defs><marker id="adink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="adacc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="adred" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="adfnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<path d="M 60.0,232.0 L 112.0,186.0 L 360.0,186.0 L 308.0,232.0 Z" fill="rgba(0,0,0,0)" stroke="#5c3d1e" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M 60.0,158.0 L 112.0,112.0 L 360.0,112.0 L 308.0,158.0 Z" fill="rgba(0,0,0,0)" stroke="#5c3d1e" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M 60.0,84.0 L 112.0,38.0 L 360.0,38.0 L 308.0,84.0 Z" fill="rgba(0,0,0,0)" stroke="#a08050" stroke-width="1.0" stroke-linejoin="round"/>
+<text x="36.0" y="236.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">&#931;<tspan font-size='8' dy='3'>t</tspan></text>
+<text x="36.0" y="162.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">&#931;<tspan font-size='8' dy='3'>t+dt</tspan></text>
+<circle cx="164.0" cy="216.0" r="2.8" fill="#1a1208"/>
+<circle cx="240.0" cy="142.0" r="2.8" fill="#1a1208"/>
+<path d="M 164.0,216.0 L 164.0,142.0" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#adred)"/>
+<path d="M 164.0,142.0 L 240.0,142.0" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#adink)"/>
+<path d="M 164.0,216.0 L 240.0,142.0" fill="none" stroke="#8b6239" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3.5"/>
+<text x="155.0" y="183.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" text-anchor="end" fill="none" stroke="#f5eedc" stroke-width="3.4" stroke-linejoin="round">N dt</text><text x="155.0" y="183.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" text-anchor="end" fill="#9b3b26">N dt</text>
+<text x="202.0" y="131.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" text-anchor="middle" fill="none" stroke="#f5eedc" stroke-width="3.4" stroke-linejoin="round">N<tspan font-size='8' dy='-4'>i</tspan><tspan dy='4'> dt</tspan></text><text x="202.0" y="131.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" text-anchor="middle" fill="#1a1208">N<tspan font-size='8' dy='-4'>i</tspan><tspan dy='4'> dt</tspan></text>
+<text x="406.0" y="116.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">on each slice:</text>
+<text x="406.0" y="140.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">q<tspan font-size='8' dy='3'>ij</tspan><tspan dy='-3'> — the spatial metric,</tspan></text>
+<text x="418.0" y="160.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">the configuration variable</text>
+<text x="406.0" y="186.0" font-size="12" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">&#960;<tspan font-size='8' dy='-4'>ij</tspan><tspan dy='4'> — its momentum, built</tspan></text>
+<text x="418.0" y="206.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">from the extrinsic curvature</text>
+<text x="406.0" y="240.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">lapse N and shift N<tspan font-size='8' dy='-4'>i</tspan></text>
+<text x="406.0" y="258.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">say how one slice sits</text>
+<text x="406.0" y="274.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">inside the next: they are</text>
+<text x="406.0" y="290.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">the gauge freedom.</text>
+</svg>
+<figcaption>The 3+1 split. Spacetime is cut into spatial slices; the metric on a slice is the configuration variable and its momentum is built from the extrinsic curvature. The lapse \(N\) and the shift \(N^i\) say how one slice sits inside the next, and are pure gauge: choosing them differently relabels the same spacetime.</figcaption>
+  </figure>
+
+  <p>The count is the one the first part performs, done on gravity. At each point of the slice the phase
+  space has twelve dimensions — six for the spatial metric, six for its momentum. There are four constraints,
+  one scalar and three vector, and, being first class, each costs two dimensions: one for restricting to the
+  surface on which it vanishes, one for quotienting by the motion it generates.</p>
+
+  <div class="math-block centered">\[\underbrace{12}_{q_{ij},\;\pi^{ij}}\;-\;2\times\underbrace{4}_{\text{constraints}}\;=\;4\;=\;2\times\underbrace{2}_{\text{polarisations}}\]</div>
+
+  <p>What is left is two field degrees of freedom with a momentum apiece: the two polarisations of a
+  gravitational wave. The arithmetic of pages 2 to 4 is, here, the count of what gravity actually carries.</p>
+
+  <p>It is worth saying plainly what the difficulty with time is, now that the previous section has said what
+  quantization does. Since the total Hamiltonian is a sum of constraints, Dirac's route requires the physical
+  states to be annihilated by it, \(\hat H\psi=0\) — the Wheeler–DeWitt equation. What is missing from it is
+  the right-hand side. In every other theory the Hamiltonian is the operator that moves a state through time;
+  here it is the operator a physical state must be killed by, and so nothing evolves. This is not an
+  embarrassment to be patched over. It is, in quantum form, what the glossary says in classical form: nothing
+  distinguishes the energy from any other observable except the convention that its flow is called time. Take
+  away the background time and the convention has nothing left to stand on.</p>
+
   <p>Here the hypothesis this work depends on is the one that fails. The reduced space — the space of geometries — is not a manifold: at a geometry with a symmetry the gauge group does not act freely, the rank is not constant, and the quotient is stratified rather than smooth. The remark on page 2, that constant rank is needed because otherwise the number of degrees of freedom varies from point to point, is exactly the obstruction, met in the one case where it matters most. That is why gravity is not quantised by first reducing and then quantising the reduced space, but the other way round: the constraints are imposed on states.</p>
 
+  <figure class="diag">
+<svg role="img" viewBox="0 0 680 310" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>Superspace: the orbits of the diffeomorphism group, and the corner where one of them is smaller</title>
+<desc>Above, a rounded region labelled Riem of Sigma holds six orbits of the diffeomorphism group; five are long curves and the sixth is reduced to a single point, marked in red, standing for a metric with a symmetry. Dashed arrows carry each orbit down to a point of a horizontal line below, the superspace. Five of the images are ordinary points; the image of the small orbit is drawn as a corner, marking that the quotient is stratified rather than smooth.</desc>
+<defs><marker id="spink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#1a1208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="spacc" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#8b6239" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="spred" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="spfnt" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M1.6 1.3L8.6 5L1.6 8.7" fill="none" stroke="#6b5a3e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<path d="M 74,70 Q 60,140 84,200 Q 250,224 462,196 Q 486,132 458,66 Q 250,46 74,70 Z" fill="rgba(200,170,100,.10)" stroke="#a08050" stroke-width="1.1"/>
+<text x="74.0" y="34.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">Riem(&#931;) &#8212; every metric on the slice</text>
+<path d="M 118.0,86.0 Q 121.1,98.0 122.3,104.0 Q 123.5,110.0 124.2,116.0 Q 124.9,122.0 124.8,128.0 Q 124.8,134.0 124.1,140.0 Q 123.3,146.0 122.1,152.0 Q 120.8,158.0 119.3,164.0 L 117.7,170.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 175.0,86.0 Q 178.1,98.0 179.3,104.0 Q 180.5,110.0 181.2,116.0 Q 181.9,122.0 181.8,128.0 Q 181.8,134.0 181.1,140.0 Q 180.3,146.0 179.1,152.0 Q 177.8,158.0 176.3,164.0 L 174.7,170.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 236.0,86.0 Q 239.1,98.0 240.3,104.0 Q 241.5,110.0 242.2,116.0 Q 242.9,122.0 242.8,128.0 Q 242.8,134.0 242.1,140.0 Q 241.3,146.0 240.1,152.0 Q 238.8,158.0 237.3,164.0 L 235.7,170.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 364.0,86.0 Q 367.1,98.0 368.3,104.0 Q 369.5,110.0 370.2,116.0 Q 370.9,122.0 370.8,128.0 Q 370.8,134.0 370.1,140.0 Q 369.3,146.0 368.1,152.0 Q 366.8,158.0 365.3,164.0 L 363.7,170.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 424.0,86.0 Q 427.1,98.0 428.3,104.0 Q 429.5,110.0 430.2,116.0 Q 430.9,122.0 430.8,128.0 Q 430.8,134.0 430.1,140.0 Q 429.3,146.0 428.1,152.0 Q 426.8,158.0 425.3,164.0 L 423.7,170.0" fill="none" stroke="#5c3d1e" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="300" cy="134" r="4.2" fill="#9b3b26"/>
+<path d="M 118.0,184.0 L 118.0,259.0" fill="none" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3.5" marker-end="url(#spfnt)"/>
+<path d="M 175.0,184.0 L 175.0,259.0" fill="none" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3.5" marker-end="url(#spfnt)"/>
+<path d="M 236.0,184.0 L 236.0,259.0" fill="none" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3.5" marker-end="url(#spfnt)"/>
+<path d="M 300.0,144.0 L 300.0,259.0" fill="none" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3.5" marker-end="url(#spfnt)"/>
+<path d="M 364.0,184.0 L 364.0,259.0" fill="none" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3.5" marker-end="url(#spfnt)"/>
+<path d="M 424.0,184.0 L 424.0,259.0" fill="none" stroke="#a08050" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3.5" marker-end="url(#spfnt)"/>
+<path d="M 70.0,268.0 L 462.0,268.0" fill="none" stroke="#5c3d1e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 281.0,251.0 L 300.0,268.0 L 319.0,251.0" fill="none" stroke="#9b3b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="118" cy="268" r="2.6" fill="#5c3d1e"/>
+<circle cx="175" cy="268" r="2.6" fill="#5c3d1e"/>
+<circle cx="236" cy="268" r="2.6" fill="#5c3d1e"/>
+<circle cx="364" cy="268" r="2.6" fill="#5c3d1e"/>
+<circle cx="424" cy="268" r="2.6" fill="#5c3d1e"/>
+<circle cx="300" cy="268" r="3.4" fill="#f5eedc" stroke="#9b3b26" stroke-width="1.4"/>
+<text x="74.0" y="294.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#6b5a3e">superspace, Riem(&#931;) / Diff(&#931;) &#8212; the space of geometries</text>
+<text x="128.0" y="232.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="none" stroke="#f5eedc" stroke-width="3.4" stroke-linejoin="round">one orbit = one geometry</text><text x="128.0" y="232.0" font-size="10" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#5c3d1e">one orbit = one geometry</text>
+<text x="492.0" y="120.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">a metric with a</text>
+<text x="492.0" y="136.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">symmetry: the gauge</text>
+<text x="492.0" y="152.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">group does not act</text>
+<text x="492.0" y="168.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">freely, so the orbit is</text>
+<text x="492.0" y="184.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">smaller and the rank</text>
+<text x="492.0" y="200.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">drops.</text>
+<text x="492.0" y="246.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">Its image is a corner,</text>
+<text x="492.0" y="262.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">not a point like the</text>
+<text x="492.0" y="278.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">others: the quotient is</text>
+<text x="492.0" y="294.0" font-size="11" font-family="'EB Garamond',Georgia,serif" font-style="italic" fill="#9b3b26">stratified, not smooth.</text>
+</svg>
+<figcaption>\(\mathrm{Riem}(\Sigma)\) is the space of all metrics on a slice, and the orbits of \(\mathrm{Diff}(\Sigma)\) are the sets of metrics differing only by a relabelling of points — so one orbit is one geometry. At a metric with a symmetry the group does not act freely, the orbit is smaller and the rank drops: the failure that the counter-example of &#167;6 arranges by hand, here occurring on its own in the case that matters most.</figcaption>
+  </figure>
+
   <p>The best known attempt to make that second route work is Ashtekar's, from 1986 [13]. It is not a new framework but a change of variables inside this one: a self-dual <a class="gterm" href="#gl-connection">connection</a> in place of the spatial metric, with a densitised triad as its momentum. The constraints become polynomial, which is what made them look quantisable at all, and general relativity acquires the shape of an \(SU(2)\) gauge theory — which is what let the methods of the previous section be brought to bear on it, and what loop quantum gravity was built upon [15]. The connection so obtained is complex, and recovering real Lorentzian gravity from it requires reality conditions that were never made to work comfortably; Barbero's real connection [14], carrying the parameter now named after him and Immirzi, is what the subject uses today. The price is specific: with a real parameter the scalar constraint acquires a term in the extrinsic curvature, carrying a factor that vanishes only in the self-dual case, so that the polynomial form which motivated the change is lost — while the connection variables, the gauge structure and the rest of the framework are kept. A regularisation making that constraint into a well-defined operator was given later; whether it has the right classical limit, and so whether it describes gravity, is still argued. The programme is not a finished theory.</p>
+
+  <p>What the programme did obtain is worth stating, because it touches the first section of this
+  commentary. In the loop representation the operators for area and for volume have discrete spectra: an area
+  comes in multiples set by \(\ell_P^2\) and the Barbero–Immirzi parameter, so that a surface cannot be given
+  an arbitrarily small area, much as a state cannot be given an arbitrarily small cell. The parallel is tempting
+  and should be resisted. The area quantised there is area in space, measured by the metric; the area of the
+  first section is area in phase space, measured by \(\omega\). They carry different dimensions and come from
+  different places, and that both should turn out granular is a suggestion and not a consequence. Nothing in
+  this work implies it.</p>
 
   <div class="nota"><strong>Editorial note:</strong> this afterword is an addition of 2026 and is no part of the 1993 manuscript, which stops with the second-order equation.</div>
 </div>
